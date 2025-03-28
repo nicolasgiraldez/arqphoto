@@ -1,4 +1,3 @@
-
 name: Azure Static Web Apps CI/CD
 
 on:
@@ -20,28 +19,26 @@ jobs:
         with:
           submodules: true
       
-      - name: Build And Deploy
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Build Next.js App
+        run: npm run build
+      
+      - name: Export Static Files
+        run: npm run export
+      
+      - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/" # Root of your project
-          api_location: "" # Leave blank if no Azure Functions
-          output_location: "out" # Next.js export directory
-          app_build_command: "npm ci && npm run build && npm run export"
-        # Optional: Add this if you want to skip deployment if token is missing
-        # skip_deploy_on_missing_secrets: true
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "close"
+          app_location: "/"
+          output_location: "out"
