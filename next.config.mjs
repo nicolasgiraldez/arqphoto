@@ -1,18 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export', // Enable static export
   images: {
-    domains: ['v0.blob.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'v0.blob.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-  },
+    unoptimized: true // Required for static export
+  }
 }
 
-export default nextConfig
-
+module.exports = nextConfig
