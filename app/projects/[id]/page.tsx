@@ -280,7 +280,7 @@ function CasasAtrapadasGallery({ images, alt, mainImage }: { images: string[]; a
       </div>
 
       {isOpen && selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center" onClick={closeLightbox}>
           <div className="relative w-full h-full flex items-center justify-center">
             {/* Botón cerrar */}
             <button
@@ -292,7 +292,7 @@ function CasasAtrapadasGallery({ images, alt, mainImage }: { images: string[]; a
             </button>
 
             {/* Imagen actual */}
-            <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center p-4">
+            <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center p-4" onClick={(e) => e.stopPropagation()}>
               <div className="relative w-full h-full">
                 <Image
                   src={allImages[selectedIndex] || "/placeholder.svg?height=800&width=1200"}
@@ -307,7 +307,7 @@ function CasasAtrapadasGallery({ images, alt, mainImage }: { images: string[]; a
 
             {/* Navegación */}
             <button
-              onClick={() => navigateToImage(selectedIndex - 1)}
+              onClick={(e) => { e.stopPropagation(); navigateToImage(selectedIndex - 1) }}
               className="absolute left-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
               aria-label="Imagen anterior"
             >
@@ -315,7 +315,7 @@ function CasasAtrapadasGallery({ images, alt, mainImage }: { images: string[]; a
             </button>
 
             <button
-              onClick={() => navigateToImage(selectedIndex + 1)}
+              onClick={(e) => { e.stopPropagation(); navigateToImage(selectedIndex + 1) }}
               className="absolute right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
               aria-label="Imagen siguiente"
             >
