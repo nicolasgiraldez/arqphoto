@@ -2,8 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export default function ProjectsPage() {
@@ -11,39 +10,12 @@ export default function ProjectsPage() {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         <div className="container py-12">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <div>
-              <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "mb-2 -ml-4 h-8 px-2")}>
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Volver al Inicio
-              </Link>
-              <h1 className="text-3xl font-bold tracking-tight">Todos los Proyectos</h1>
-            </div>
-            <div className="flex gap-4 w-full sm:w-auto">
-              <Select defaultValue="all">
-                <SelectTrigger className="w-full sm:w-[180px]">
-                  <SelectValue placeholder="Categoría" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todas las Categorías</SelectItem>
-                  <SelectItem value="residential">Residencial</SelectItem>
-                  <SelectItem value="commercial">Comercial</SelectItem>
-                  <SelectItem value="cultural">Cultural</SelectItem>
-                  <SelectItem value="public">Espacios Públicos</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select defaultValue="newest">
-                <SelectTrigger className="w-full sm:w-[180px]">
-                  <SelectValue placeholder="Ordenar por" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="newest">Más Recientes</SelectItem>
-                  <SelectItem value="oldest">Más Antiguos</SelectItem>
-                  <SelectItem value="az">A-Z</SelectItem>
-                  <SelectItem value="za">Z-A</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="mb-8">
+            <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "mb-2 -ml-4 h-8 px-2")}>
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Volver al Inicio
+            </Link>
+            <h1 className="text-3xl font-bold tracking-tight">Todos los Proyectos</h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
