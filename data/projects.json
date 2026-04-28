@@ -74,6 +74,7 @@
       "/images/casas-atrapadas-7.jpeg"
     ],
     "portrait": true,
+    "crop": "bottom",
     "related": [
       "9"
     ],
