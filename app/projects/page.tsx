@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import projects from "@/data/projects.json"
 
 export default function ProjectsPage() {
   return (
@@ -19,7 +20,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allProjects.map((project) => (
+            {projects.map((project) => (
               <Link
                 key={project.id}
                 href={`/projects/${project.id}`}
@@ -27,7 +28,7 @@ export default function ProjectsPage() {
               >
                 <div className={`aspect-[4/3] relative overflow-hidden`}>
                   <Image
-                    src={project.image || "/placeholder.svg?height=800&width=1200"}
+                    src={project.mainImage || "/placeholder.svg?height=800&width=1200"}
                     alt={project.title}
                     fill
                     className={`${
@@ -61,102 +62,4 @@ export default function ProjectsPage() {
   )
 }
 
-const allProjects = [
-  {
-    id: "1",
-    title: "Pabellón de Cristal",
-    location: "Buenos Aires, Argentina",
-    category: "Cultural",
-    year: "2023",
-    image: "/images/pabellon-cristal.jpeg",
-  },
-  {
-    id: "2",
-    title: "Arenales",
-    location: "Recoleta, Buenos Aires",
-    category: "Residencial",
-    year: "2022",
-    image: "/images/cocina-minimalista.png",
-  },
-  {
-    id: "3",
-    title: "Casas Atrapadas",
-    location: "Buenos Aires, Argentina",
-    category: "Urbano",
-    year: "2022",
-    image: "/images/casas-atrapadas-6.jpeg",
-  },
-  {
-    id: "4",
-    title: "Quirno",
-    location: "Flores, Buenos Aires",
-    category: "Residencial",
-    year: "2023",
-    image: "/images/quirno-1.jpeg",
-  },
-  {
-    id: "5",
-    title: "Renovación Histórica",
-    location: "Mendoza, Argentina",
-    category: "Cultural",
-    year: "2022",
-    image: "/images/renovacion-historica.jpeg",
-  },
-  {
-    id: "6",
-    title: "Complejo Habitacional Sustentable",
-    location: "Bariloche, Argentina",
-    category: "Residencial",
-    year: "2023",
-    image: "/images/complejo-sustentable.jpeg",
-  },
-  {
-    id: "7",
-    title: "Museo de Arte Moderno",
-    location: "Salta, Argentina",
-    category: "Cultural",
-    year: "2021",
-    image: "/images/museo-arte-moderno.jpeg",
-  },
-  {
-    id: "8",
-    title: "Hotel de Lujo",
-    location: "Ushuaia, Argentina",
-    category: "Comercial",
-    year: "2022",
-    image: "/images/hotel-lujo.jpeg",
-  },
-  {
-    id: "9",
-    title: "Pabellón de Parque Urbano",
-    location: "La Plata, Argentina",
-    category: "Espacios Públicos",
-    year: "2023",
-    image: "/images/parque-urbano.jpeg",
-  },
-  {
-    id: "10",
-    title: "Refugio de Montaña",
-    location: "San Martín de los Andes, Argentina",
-    category: "Residencial",
-    year: "2021",
-    image: "/images/refugio-montana.jpeg",
-  },
-  {
-    id: "11",
-    title: "Sede Corporativa",
-    location: "Buenos Aires, Argentina",
-    category: "Comercial",
-    year: "2022",
-    image: "/images/sede-corporativa.jpeg",
-  },
-  {
-    id: "12",
-    title: "Biblioteca Pública",
-    location: "Tucumán, Argentina",
-    category: "Espacios Públicos",
-    year: "2023",
-    image: "/images/biblioteca-publica.jpeg",
-  },
-]
 

@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ccf42cd327b19400e3b02e01bf50217f",
-    "previewModeSigningKey": "4fb76039316b96aa47e777be593971e26d538785ceeb0a1c9991d2c49d625cf4",
-    "previewModeEncryptionKey": "2b78588176d74929c20ec4c684f218bd560f1e4b90bb1265d9caea879a28cd49"
-  }
-}
+{"version":4,"routes":{"/projects/1":{},"/projects/2":{},"/projects/3":{},"/projects/4":{},"/projects/5":{},"/projects/6":{},"/projects/7":{},"/projects/8":{},"/projects/9":{},"/projects/10":{},"/projects/11":{},"/projects/12":{}},"dynamicRoutes":{"/projects/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projects/[id]","routeRegex":"^\\/projects\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c2d9d175f841882fd8ae12e2651bd12f","previewModeSigningKey":"e4cadb4d6640aa15f47f52a1b1f8c144d5c3b32fb7168f4f228be6cc9cea25ac","previewModeEncryptionKey":"e7b83bf411bea1eca57fa0e6a8dafeb260f527667080eaa8db1a4d2f7398cdd1"}}

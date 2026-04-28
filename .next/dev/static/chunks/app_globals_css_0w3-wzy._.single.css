@@ -1876,26 +1876,8 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:w-\[180px\] {
-      width: 180px;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:w-auto {
-      width: auto;
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:flex-row {
       flex-direction: row;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:items-center {
-      align-items: center;
     }
   }
 
