@@ -2,8 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -13,12 +14,10 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         <div className="container py-12">
-          <Button asChild variant="ghost" className="mb-6 -ml-4">
-            <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Volver al Inicio
-            </Link>
-          </Button>
+          <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "mb-6 -ml-4")}>
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Volver al Inicio
+          </Link>
 
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div>

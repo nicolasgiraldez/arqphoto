@@ -2,8 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { cn } from "@/lib/utils"
 
 export default function ProjectsPage() {
   return (
@@ -12,12 +13,10 @@ export default function ProjectsPage() {
         <div className="container py-12">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
             <div>
-              <Button asChild variant="ghost" className="mb-2 -ml-4 h-8 px-2">
-                <Link href="/">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Volver al Inicio
-                </Link>
-              </Button>
+              <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "mb-2 -ml-4 h-8 px-2")}>
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al Inicio
+              </Link>
               <h1 className="text-3xl font-bold tracking-tight">Todos los Proyectos</h1>
             </div>
             <div className="flex gap-4 w-full sm:w-auto">

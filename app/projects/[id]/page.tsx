@@ -5,8 +5,9 @@ import Image from "next/image"
 import { ArrowLeft, Calendar, MapPin, ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useState, useEffect } from "react"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils"
 import { ImageGallery } from "@/components/image-gallery"
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
@@ -17,12 +18,10 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         <div className="container py-12">
-          <Button asChild variant="ghost" className="mb-6 -ml-4">
-            <Link href="/projects">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Volver a Proyectos
-            </Link>
-          </Button>
+          <Link href="/projects" className={cn(buttonVariants({ variant: "ghost" }), "mb-6 -ml-4")}>
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Volver a Proyectos
+          </Link>
 
           <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
             <div>

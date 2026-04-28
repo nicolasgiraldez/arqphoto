@@ -2,8 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Camera, Mail, MapPin, Menu } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { cn } from "@/lib/utils"
 
 export default function Home() {
   return (
@@ -26,11 +27,9 @@ export default function Home() {
             </Link>
           </nav>
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Abrir menú</span>
-              </Button>
+            <SheetTrigger render={<Button variant="outline" size="icon" className="md:hidden" />}>
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Abrir menú</span>
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col gap-4 mt-8">
@@ -67,12 +66,10 @@ export default function Home() {
               <p className="mt-4 text-xl max-w-2xl mx-auto">
                 Fotografía arquitectónica que destaca la belleza, forma y función de los espacios construidos.
               </p>
-              <Button asChild className="mt-8" size="lg">
-                <Link href="#work">
-                  Ver Portfolio
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <Link href="#work" className={cn(buttonVariants({ size: "lg" }), "mt-8")}>
+                Ver Portfolio
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
@@ -105,12 +102,10 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-12 text-center">
-              <Button asChild variant="outline" size="lg">
-                <Link href="/projects">
-                  Ver Todos los Proyectos
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <Link href="/projects" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                Ver Todos los Proyectos
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
@@ -158,18 +153,14 @@ export default function Home() {
                 Estoy disponible para encargos en todo el país. Contactame para hablar sobre tu proyecto.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <a href="mailto:contacto@nicogiraldez.com.ar">
-                    <Mail className="mr-2 h-4 w-4" />
-                    contacto@nicogiraldez.com.ar
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">
-                    Formulario de Contacto
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <a href="mailto:contacto@nicogiraldez.com.ar" className={buttonVariants({ size: "lg" })}>
+                  <Mail className="mr-2 h-4 w-4" />
+                  contacto@nicogiraldez.com.ar
+                </a>
+                <Link href="/contact" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                  Formulario de Contacto
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
