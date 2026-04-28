@@ -8,9 +8,10 @@ interface ImageGalleryProps {
   images: string[]
   alt: string
   mainImage?: string
+  portrait?: boolean
 }
 
-export function ImageGallery({ images, alt, mainImage }: ImageGalleryProps) {
+export function ImageGallery({ images, alt, mainImage, portrait = false }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -84,14 +85,14 @@ export function ImageGallery({ images, alt, mainImage }: ImageGalleryProps) {
         {images.map((image, index) => (
           <div
             key={index}
-            className="aspect-[4/3] relative rounded-lg overflow-hidden cursor-pointer"
+            className={`${portrait ? "aspect-[3/4]" : "aspect-[4/3]"} relative rounded-lg overflow-hidden cursor-pointer`}
             onClick={() => openLightbox(index)}
           >
             <Image
               src={image || "/placeholder.svg?height=800&width=1200"}
               alt={`${alt} - Imagen ${index + 1}`}
               fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
+              className={`${portrait ? "object-contain object-bottom" : "object-cover"} transition-transform duration-300 hover:scale-105`}
             />
           </div>
         ))}
