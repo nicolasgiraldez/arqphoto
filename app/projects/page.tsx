@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import projects from "@/data/projects.json"
+import site from "@/data/site.json"
 
 export default function ProjectsPage() {
   return (
@@ -55,7 +56,7 @@ export default function ProjectsPage() {
       </main>
       <footer className="border-t py-8">
         <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Nico Giraldez Fotografía. Todos los derechos reservados.
+          © {new Date().getFullYear()} {site.copyright}
         </div>
       </footer>
     </div>

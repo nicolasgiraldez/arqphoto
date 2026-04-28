@@ -71,7 +71,7 @@ export default function ContactPage() {
       </main>
       <footer className="border-t py-8">
         <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Nico Giraldez Fotografía. Todos los derechos reservados.
+          © {new Date().getFullYear()} {site.copyright}
         </div>
       </footer>
     </div>

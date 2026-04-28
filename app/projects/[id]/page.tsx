@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, MapPin, ChevronLeft, ChevronRight, X } from "lucid
 import { useState, useEffect, use } from "react"
 
 import projects from "@/data/projects.json"
+import site from "@/data/site.json"
 
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -161,7 +162,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
       </main>
       <footer className="border-t py-8">
         <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Nico Giraldez Fotografía. Todos los derechos reservados.
+          © {new Date().getFullYear()} {site.copyright}
         </div>
       </footer>
     </div>

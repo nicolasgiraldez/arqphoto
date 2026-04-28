@@ -141,7 +141,7 @@ export default function Home() {
             <span className="font-semibold">Nico Giraldez Fotografía</span>
           </div>
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Nico Giraldez. Todos los derechos reservados.
+            © {new Date().getFullYear()} {site.copyright}
           </div>
           <nav className="flex gap-6">
             {site.social.map((s) => (
