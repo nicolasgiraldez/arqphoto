@@ -6,6 +6,10 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { MobileNav } from "@/components/mobile-nav"
 import site from "@/data/site.json"
+import allProjects from "@/data/projects.json"
+import featuredIds from "@/data/destacados.json"
+
+const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
 
 export default function Home() {
   return (
@@ -17,13 +21,13 @@ export default function Home() {
             <span>Nico Giraldez</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="#work" className="text-sm font-medium hover:underline underline-offset-4">
+            <Link href="/projects" className="text-sm font-medium hover:underline underline-offset-4">
               Proyectos
             </Link>
             <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
-              Sobre Mí
+              Sobre mí
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
+            <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4">
               Contacto
             </Link>
           </nav>
@@ -44,8 +48,8 @@ export default function Home() {
             <div className="container text-center text-white">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">{site.hero.title}</h1>
               <p className="mt-4 text-xl max-w-2xl mx-auto">{site.hero.subtitle}</p>
-              <Link href="#work" className={cn(buttonVariants({ size: "lg" }), "mt-8")}>
-                Ver Portfolio
+              <Link href="/projects" className={cn(buttonVariants({ size: "lg" }), "mt-8")}>
+                Ver portfolio
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -54,9 +58,9 @@ export default function Home() {
 
         <section id="work" className="py-16">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tight mb-8">Proyectos Destacados</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-8">Proyectos destacados</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((project) => (
+              {destacados.map((project) => (
                 <Link
                   key={project.id}
                   href={`/projects/${project.id}`}
@@ -64,7 +68,7 @@ export default function Home() {
                 >
                   <div className={`aspect-[4/3] relative overflow-hidden`}>
                     <Image
-                      src={project.image || "/placeholder.svg?height=800&width=1200"}
+                      src={project.mainImage || "/placeholder.svg?height=800&width=1200"}
                       alt={project.title}
                       fill
                       className={`${project.id === "3" ? "object-contain object-bottom" : "object-cover"
@@ -80,7 +84,7 @@ export default function Home() {
             </div>
             <div className="mt-12 text-center">
               <Link href="/projects" className={buttonVariants({ variant: "outline", size: "lg" })}>
-                Ver Todos los Proyectos
+                Ver todos los proyectos
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -99,13 +103,13 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h2 className="text-3xl font-bold tracking-tight mb-6">Sobre Mí</h2>
+                <h2 className="text-3xl font-bold tracking-tight mb-6">Sobre mí</h2>
                 <p className="text-lg mb-4">{site.about.bio[0]}</p>
                 <p className="mb-4">{site.about.bio[1]}</p>
                 <p className="mb-6">{site.about.bio[2]}</p>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 mr-1" />
-                  <span>Basado en {site.about.location}, {site.about.locationNote.toLowerCase()}</span>
+                  <span>{site.about.location}</span>
                 </div>
               </div>
             </div>
@@ -115,9 +119,9 @@ export default function Home() {
         <section id="contact" className="py-16">
           <div className="container">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Trabajemos Juntos</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Trabajemos juntos</h2>
               <p className="text-lg mb-8">
-                Estoy disponible para encargos en todo el país. Contactame para hablar sobre tu proyecto.
+                Contactame para hablar sobre tu proyecto.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={`mailto:${site.contact.email}`} className={buttonVariants({ size: "lg" })}>
@@ -155,42 +159,4 @@ export default function Home() {
   )
 }
 
-const projects = [
-  {
-    id: "1",
-    title: "Pabellón de Cristal",
-    location: "Buenos Aires, Argentina",
-    image: "/images/pabellon-cristal.jpeg",
-  },
-  {
-    id: "2",
-    title: "Arenales",
-    location: "Recoleta, Buenos Aires",
-    image: "/images/cocina-minimalista.png",
-  },
-  {
-    id: "3",
-    title: "Casas Atrapadas",
-    location: "Buenos Aires, Argentina",
-    image: "/images/casas-atrapadas-6.jpeg",
-  },
-  {
-    id: "4",
-    title: "Quirno",
-    location: "Flores, Buenos Aires",
-    image: "/images/quirno-1.jpeg",
-  },
-  {
-    id: "5",
-    title: "Renovación Histórica",
-    location: "Mendoza, Argentina",
-    image: "/images/renovacion-historica.jpeg",
-  },
-  {
-    id: "6",
-    title: "Complejo Habitacional Sustentable",
-    location: "Bariloche, Argentina",
-    image: "/images/complejo-sustentable.jpeg",
-  },
-]
 
