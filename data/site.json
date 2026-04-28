@@ -18,10 +18,23 @@
     "locationNote": "Disponible para proyectos en todo el país",
     "photo": "/images/fotografo-locacion.jpeg"
   },
+  "hero": {
+    "image": "/images/buenos-aires.jpg",
+    "alt": "Buenos Aires en altura"
+  },
   "copyright": "Nico Giraldez Fotografía. Todos los derechos reservados.",
   "social": [
-    { "label": "Instagram", "url": "#" },
-    { "label": "LinkedIn", "url": "#" },
-    { "label": "Behance", "url": "#" }
+    {
+      "label": "Instagram",
+      "url": "#"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "#"
+    },
+    {
+      "label": "Behance",
+      "url": "#"
+    }
   ]
 }

@@ -4,7 +4,6 @@ import { ArrowRight, Camera, Mail, MapPin } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { HeroImage } from "@/components/hero-image"
 import { MobileNav } from "@/components/mobile-nav"
 import site from "@/data/site.json"
 
@@ -32,11 +31,14 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="relative h-[80vh] w-full overflow-hidden">
-          <HeroImage
-            src="/images/hero-arquitectura.jpeg"
-            alt="Edificio arquitectónico moderno con iluminación dramática"
+        <section className="relative w-full">
+          <Image
+            src={site.hero.image}
+            alt={site.hero.alt}
+            width={1920}
+            height={1080}
             priority
+            className="w-full h-auto"
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="container text-center text-white">
@@ -67,9 +69,8 @@ export default function Home() {
                       src={project.image || "/placeholder.svg?height=800&width=1200"}
                       alt={project.title}
                       fill
-                      className={`${
-                        project.id === "3" ? "object-contain object-bottom" : "object-cover"
-                      } transition-transform duration-300 group-hover:scale-105`}
+                      className={`${project.id === "3" ? "object-contain object-bottom" : "object-cover"
+                        } transition-transform duration-300 group-hover:scale-105`}
                     />
                   </div>
                   <div className="p-4">
