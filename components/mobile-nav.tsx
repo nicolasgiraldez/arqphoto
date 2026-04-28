@@ -15,7 +15,7 @@ export function MobileNav() {
       <SheetContent side="right">
         <nav className="flex flex-col gap-4 mt-8">
           <Link href="#work" className="text-lg font-medium hover:underline underline-offset-4">
-            Trabajos
+            Proyectos
           </Link>
           <Link href="#about" className="text-lg font-medium hover:underline underline-offset-4">
             Sobre Mí

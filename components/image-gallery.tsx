@@ -74,7 +74,7 @@ export function ImageGallery({ images, alt, mainImage }: ImageGalleryProps) {
   useEffect(() => {
     const galleryElement = document.querySelector("[data-gallery-component]")
     if (galleryElement) {
-      ;(galleryElement as any).openMainImage = openMainImage
+      ; (galleryElement as any).openMainImage = openMainImage
     }
   }, [])
 

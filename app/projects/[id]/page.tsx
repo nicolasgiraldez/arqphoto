@@ -48,7 +48,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                 onClick={() => {
                   const galleryComponent = document.querySelector("[data-gallery-component]")
                   if (galleryComponent) {
-                    ;(galleryComponent as any).openMainImage()
+                    ; (galleryComponent as any).openMainImage()
                   }
                 }}
               >
@@ -57,9 +57,8 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                   alt={project.title}
                   fill
                   priority
-                  className={`transition-transform duration-300 ${
-                    project.id === "3" ? "object-contain object-bottom hover:scale-105" : "object-cover hover:scale-105"
-                  }`}
+                  className={`transition-transform duration-300 ${project.id === "3" ? "object-contain object-bottom hover:scale-105" : "object-cover hover:scale-105"
+                    }`}
                 />
               </div>
 
@@ -256,7 +255,7 @@ function CasasAtrapadasGallery({ images, alt, mainImage }: { images: string[]; a
   useEffect(() => {
     const galleryElement = document.querySelector("[data-gallery-component]")
     if (galleryElement) {
-      ;(galleryElement as any).openMainImage = openMainImage
+      ; (galleryElement as any).openMainImage = openMainImage
     }
   }, [])
 

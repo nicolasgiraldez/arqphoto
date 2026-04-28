@@ -20,7 +20,9 @@
   },
   "hero": {
     "image": "/images/buenos-aires.jpg",
-    "alt": "Buenos Aires en altura"
+    "alt": "Buenos Aires en altura",
+    "title": "Fotografía de Arquitectura",
+    "subtitle": "Buenos Aires, Argentina"
   },
   "copyright": "Nico Giraldez Fotografía. Todos los derechos reservados.",
   "social": [

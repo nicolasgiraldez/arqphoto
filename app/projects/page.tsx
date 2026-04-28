@@ -32,9 +32,8 @@ export default function ProjectsPage() {
                     src={project.mainImage || "/placeholder.svg?height=800&width=1200"}
                     alt={project.title}
                     fill
-                    className={`${
-                      project.id === "3" ? "object-contain object-bottom" : "object-cover"
-                    } transition-transform duration-300 group-hover:scale-105`}
+                    className={`${project.id === "3" ? "object-contain object-bottom" : "object-cover"
+                      } transition-transform duration-300 group-hover:scale-105`}
                   />
                 </div>
                 <div className="p-4">

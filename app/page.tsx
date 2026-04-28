@@ -18,7 +18,7 @@ export default function Home() {
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="#work" className="text-sm font-medium hover:underline underline-offset-4">
-              Trabajos
+              Proyectos
             </Link>
             <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
               Sobre Mí
@@ -42,10 +42,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="container text-center text-white">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Capturando Arquitectura</h1>
-              <p className="mt-4 text-xl max-w-2xl mx-auto">
-                Fotografía arquitectónica que destaca la belleza, forma y función de los espacios construidos.
-              </p>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">{site.hero.title}</h1>
+              <p className="mt-4 text-xl max-w-2xl mx-auto">{site.hero.subtitle}</p>
               <Link href="#work" className={cn(buttonVariants({ size: "lg" }), "mt-8")}>
                 Ver Portfolio
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -56,7 +54,7 @@ export default function Home() {
 
         <section id="work" className="py-16">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tight mb-8">Trabajos Destacados</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-8">Proyectos Destacados</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
                 <Link
