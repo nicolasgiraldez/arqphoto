@@ -74,7 +74,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
             <div>
               <div className="sticky top-24">
-                <h2 className="text-xl font-semibold mb-4">Detalles del Proyecto</h2>
+                <h2 className="text-xl font-semibold mb-4">Detalles del proyecto</h2>
                 <dl className="grid gap-3 text-sm">
                   {project.client && (
                     <div className="grid grid-cols-2 gap-1">
@@ -104,7 +104,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
                 <Separator className="my-6" />
 
-                <h2 className="text-xl font-semibold mb-4">Servicios Proporcionados</h2>
+                <h2 className="text-xl font-semibold mb-4">Servicios proporcionados</h2>
                 <ul className="grid gap-2 text-sm">
                   {project.services.map((service, index) => (
                     <li key={index} className="flex items-start">
@@ -116,7 +116,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
                 <Separator className="my-6" />
 
-                <h2 className="text-xl font-semibold mb-4">Proyectos Relacionados</h2>
+                <h2 className="text-xl font-semibold mb-4">Proyectos relacionados</h2>
                 <div className="grid gap-4">
                   {relatedProjects.map((related) => (
                     <Link
