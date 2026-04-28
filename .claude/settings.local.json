@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start *)",
+      "Bash(curl -s http://localhost:3000/images/hero-arquitectura.jpeg -o /dev/null -w \"%{http_code}\")",
+      "Bash(kill %1)",
+      "Bash(npm run *)",
+      "Bash(curl -sI \"https://image.pollinations.ai/prompt/test\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(sort -k2)",
+      "Bash(awk '{print $5, $NF}')"
+    ]
+  }
+}

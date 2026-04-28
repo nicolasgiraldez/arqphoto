@@ -3,16 +3,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Calendar, MapPin, ChevronLeft, ChevronRight, X } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, use } from "react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 import { ImageGallery } from "@/components/image-gallery"
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  // En una aplicación real, obtendrías los datos del proyecto basados en el ID
-  const project = projects.find((p) => p.id === params.id) || projects[0]
+export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  const project = projects.find((p) => p.id === id) || projects[0]
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -328,6 +328,156 @@ const projects = [
       "Fotografía de integración con el paisaje",
       "Fotografía de detalles constructivos",
       "Imágenes para publicaciones de arquitectura sustentable",
+    ],
+  },
+  {
+    id: "7",
+    title: "Museo de Arte Moderno",
+    location: "Salta, Argentina",
+    category: "Cultural",
+    year: "2021",
+    client: "Gobierno de Salta",
+    architect: "Estudio Noroeste Arquitectura",
+    description:
+      "El Museo de Arte Moderno de Salta es una intervención arquitectónica de gran audacia formal que dialoga con el paisaje andino circundante. Sus volúmenes geométricos y fachadas de hormigón visto generan juegos de luz y sombra que cambian a lo largo del día, convirtiendo al edificio en una obra de arte en sí mismo.",
+    mainImage: "/images/museo-arte-moderno.jpeg",
+    images: [
+      "/images/museo-arte-moderno.jpeg",
+      "/images/museo-arte-moderno.jpeg",
+      "/images/museo-arte-moderno.jpeg",
+      "/images/museo-arte-moderno.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior e interior",
+      "Fotografía de espacios expositivos",
+      "Fotografía de detalles constructivos",
+      "Fotografía al amanecer y atardecer",
+      "Imágenes editoriales para publicación",
+    ],
+  },
+  {
+    id: "8",
+    title: "Hotel de Lujo",
+    location: "Ushuaia, Argentina",
+    category: "Comercial",
+    year: "2022",
+    client: "Grupo Hotelero Austral",
+    architect: "Estudio Fin del Mundo",
+    description:
+      "Este hotel de lujo en Ushuaia aprovecha el dramático paisaje fueguino para crear una experiencia de hospedaje única. La arquitectura se integra con el entorno natural mediante el uso de materiales locales como la madera de lenga y la piedra patagónica, mientras grandes ventanales enmarcan vistas al Canal Beagle y las montañas.",
+    mainImage: "/images/hotel-lujo.jpeg",
+    images: [
+      "/images/hotel-lujo.jpeg",
+      "/images/hotel-lujo.jpeg",
+      "/images/hotel-lujo.jpeg",
+      "/images/hotel-lujo.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior e interior",
+      "Fotografía de habitaciones y espacios comunes",
+      "Fotografía de integración con el paisaje",
+      "Fotografía gastronómica y de amenidades",
+      "Imágenes para marketing hotelero",
+    ],
+  },
+  {
+    id: "9",
+    title: "Pabellón de Parque Urbano",
+    location: "La Plata, Argentina",
+    category: "Espacios Públicos",
+    year: "2023",
+    client: "Municipalidad de La Plata",
+    architect: "Estudio Ciudad Nueva",
+    description:
+      "El Pabellón de Parque Urbano de La Plata es una estructura liviana y permeaable diseñada para activar el espacio público. Su cubierta metálica plegada y sus pilares delgados crean un refugio abierto que invita a la permanencia sin interrumpir las visuales del parque, convirtiéndose en punto de encuentro para la comunidad.",
+    mainImage: "/images/parque-urbano.jpeg",
+    images: [
+      "/images/parque-urbano.jpeg",
+      "/images/parque-urbano.jpeg",
+      "/images/parque-urbano.jpeg",
+      "/images/parque-urbano.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior",
+      "Fotografía de espacio público y usuarios",
+      "Fotografía de detalles estructurales",
+      "Fotografía de integración con el entorno",
+      "Imágenes para publicaciones de arquitectura pública",
+    ],
+  },
+  {
+    id: "10",
+    title: "Refugio de Montaña",
+    location: "San Martín de los Andes, Argentina",
+    category: "Residencial",
+    year: "2021",
+    client: "Privado",
+    architect: "Estudio Cordillera",
+    description:
+      "Este refugio de montaña en San Martín de los Andes combina la tradición constructiva de la región con una sensibilidad contemporánea. La madera y la piedra son los materiales protagonistas, mientras que grandes ventanales orientados al lago permiten disfrutar del paisaje patagónico desde el interior con máximo confort térmico.",
+    mainImage: "/images/refugio-montana.jpeg",
+    images: [
+      "/images/refugio-montana.jpeg",
+      "/images/refugio-montana.jpeg",
+      "/images/refugio-montana.jpeg",
+      "/images/refugio-montana.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior e interior",
+      "Fotografía de integración con el paisaje natural",
+      "Fotografía de detalles en madera y piedra",
+      "Fotografía en distintas condiciones climáticas",
+      "Imágenes para publicaciones de arquitectura residencial",
+    ],
+  },
+  {
+    id: "11",
+    title: "Sede Corporativa",
+    location: "Buenos Aires, Argentina",
+    category: "Comercial",
+    year: "2022",
+    client: "Corporación Río de la Plata",
+    architect: "Estudio Metrópolis BA",
+    description:
+      "La sede corporativa de este grupo empresarial en el microcentro porteño redefine la imagen institucional a través de una arquitectura de vidrio y acero que transmite transparencia y modernidad. Los espacios de trabajo abiertos y flexibles favorecen la colaboración, mientras la terraza jardín en el último piso ofrece un oasis verde en el corazón de la ciudad.",
+    mainImage: "/images/sede-corporativa.jpeg",
+    images: [
+      "/images/sede-corporativa.jpeg",
+      "/images/sede-corporativa.jpeg",
+      "/images/sede-corporativa.jpeg",
+      "/images/sede-corporativa.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior e interior",
+      "Fotografía de espacios de trabajo",
+      "Fotografía de detalles corporativos",
+      "Fotografía de áreas comunes y amenidades",
+      "Imágenes para comunicación institucional",
+    ],
+  },
+  {
+    id: "12",
+    title: "Biblioteca Pública",
+    location: "Tucumán, Argentina",
+    category: "Espacios Públicos",
+    year: "2023",
+    client: "Gobierno de Tucumán",
+    architect: "Estudio Norte Grande",
+    description:
+      "La nueva Biblioteca Pública de Tucumán es un edificio cívico que apuesta por la arquitectura como herramienta de inclusión social. Sus espacios de lectura con doble altura, iluminados cenitalmente, crean ambientes propicios para el estudio y la concentración, mientras la fachada permeable invita a toda la comunidad a hacer uso de sus instalaciones.",
+    mainImage: "/images/biblioteca-publica.jpeg",
+    images: [
+      "/images/biblioteca-publica.jpeg",
+      "/images/biblioteca-publica.jpeg",
+      "/images/biblioteca-publica.jpeg",
+      "/images/biblioteca-publica.jpeg",
+    ],
+    services: [
+      "Fotografía arquitectónica exterior e interior",
+      "Fotografía de espacios de lectura",
+      "Fotografía de detalles de iluminación natural",
+      "Fotografía de usuarios y comunidad",
+      "Imágenes para publicaciones de arquitectura pública",
     ],
   },
 ]

@@ -1,10 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Camera, Mail, MapPin, Menu } from "lucide-react"
+import { ArrowRight, Camera, Mail, MapPin } from "lucide-react"
 
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { HeroImage } from "@/components/hero-image"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function Home() {
   return (
@@ -26,39 +27,15 @@ export default function Home() {
               Contacto
             </Link>
           </nav>
-          <Sheet>
-            <SheetTrigger render={<Button variant="outline" size="icon" className="md:hidden" />}>
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Abrir menú</span>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col gap-4 mt-8">
-                <Link href="#work" className="text-lg font-medium hover:underline underline-offset-4">
-                  Trabajos
-                </Link>
-                <Link href="#about" className="text-lg font-medium hover:underline underline-offset-4">
-                  Sobre Mí
-                </Link>
-                <Link href="#contact" className="text-lg font-medium hover:underline underline-offset-4">
-                  Contacto
-                </Link>
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <MobileNav />
         </div>
       </header>
       <main className="flex-1">
         <section className="relative h-[80vh] w-full overflow-hidden">
-          <Image
+          <HeroImage
             src="/images/hero-arquitectura.jpeg"
             alt="Edificio arquitectónico moderno con iluminación dramática"
-            fill
             priority
-            className="object-cover"
-            onError={(e) => {
-              // Fallback a un placeholder si la imagen falla
-              e.currentTarget.src = "/placeholder.svg?height=1080&width=1920"
-            }}
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="container text-center text-white">
