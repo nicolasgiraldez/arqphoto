@@ -1,0 +1,26 @@
+{
+  "about": {
+    "name": "Nico Giraldez",
+    "role": "Fotógrafo de Arquitectura",
+    "photo": "/images/alex-morgan.jpeg",
+    "location": "Buenos Aires, Argentina",
+    "locationNote": "Disponible para proyectos en todo el país",
+    "bio": [
+      "Soy Nico Giraldez, fotógrafo de arquitectura con más de 10 años de experiencia capturando la esencia de los entornos construidos.",
+      "Mi trabajo se centra en destacar la interacción entre la luz, el espacio y la estructura. Creo que la gran fotografía arquitectónica no solo documenta un edificio, sino que revela su alma y la visión de sus creadores.",
+      "He colaborado con destacados arquitectos, diseñadores de interiores y publicaciones de todo el mundo para crear narrativas visuales convincentes de espacios excepcionales."
+    ]
+  },
+  "contact": {
+    "email": "contacto@nicogiraldez.com.ar",
+    "phone": "+54 11 5555-1234",
+    "location": "Buenos Aires, Argentina",
+    "locationNote": "Disponible para proyectos en todo el país",
+    "photo": "/images/fotografo-locacion.jpeg"
+  },
+  "social": [
+    { "label": "Instagram", "url": "#" },
+    { "label": "LinkedIn", "url": "#" },
+    { "label": "Behance", "url": "#" }
+  ]
+}

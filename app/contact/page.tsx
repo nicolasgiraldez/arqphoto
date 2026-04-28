@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { HeroImage } from "@/components/hero-image"
 import { ContactForm } from "@/components/contact-form"
+import site from "@/data/site.json"
 
 export default function ContactPage() {
   return (
@@ -31,7 +32,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">contacto@nicogiraldez.com.ar</p>
+                    <p className="text-muted-foreground">{site.contact.email}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -40,7 +41,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Teléfono</h3>
-                    <p className="text-muted-foreground">+54 11 5555-1234</p>
+                    <p className="text-muted-foreground">{site.contact.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -49,16 +50,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Ubicación</h3>
-                    <p className="text-muted-foreground">Buenos Aires, Argentina</p>
-                    <p className="text-muted-foreground">Disponible para proyectos en todo el país</p>
+                    <p className="text-muted-foreground">{site.contact.location}</p>
+                    <p className="text-muted-foreground">{site.contact.locationNote}</p>
                   </div>
                 </div>
               </div>
 
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
                 <HeroImage
-                  src="/images/fotografo-locacion.jpeg"
-                  alt="Nico Giraldez en locación"
+                  src={site.contact.photo}
+                  alt={`${site.about.name} en locación`}
                   fallbackSrc="/placeholder.svg?height=800&width=1200"
                 />
               </div>

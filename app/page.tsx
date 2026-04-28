@@ -6,6 +6,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { HeroImage } from "@/components/hero-image"
 import { MobileNav } from "@/components/mobile-nav"
+import site from "@/data/site.json"
 
 export default function Home() {
   return (
@@ -92,30 +93,20 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
-                  src="/images/alex-morgan.jpeg"
-                  alt="Nico Giraldez, Fotógrafo de Arquitectura"
+                  src={site.about.photo}
+                  alt={`${site.about.name}, ${site.about.role}`}
                   fill
                   className="object-cover"
                 />
               </div>
               <div>
                 <h2 className="text-3xl font-bold tracking-tight mb-6">Sobre Mí</h2>
-                <p className="text-lg mb-4">
-                  Soy Nico Giraldez, fotógrafo de arquitectura con más de 10 años de experiencia capturando la esencia
-                  de los entornos construidos.
-                </p>
-                <p className="mb-4">
-                  Mi trabajo se centra en destacar la interacción entre la luz, el espacio y la estructura. Creo que la
-                  gran fotografía arquitectónica no solo documenta un edificio, sino que revela su alma y la visión de
-                  sus creadores.
-                </p>
-                <p className="mb-6">
-                  He colaborado con destacados arquitectos, diseñadores de interiores y publicaciones de todo el mundo
-                  para crear narrativas visuales convincentes de espacios excepcionales.
-                </p>
+                <p className="text-lg mb-4">{site.about.bio[0]}</p>
+                <p className="mb-4">{site.about.bio[1]}</p>
+                <p className="mb-6">{site.about.bio[2]}</p>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 mr-1" />
-                  <span>Basado en Buenos Aires, disponible en todo el país</span>
+                  <span>Basado en {site.about.location}, {site.about.locationNote.toLowerCase()}</span>
                 </div>
               </div>
             </div>
@@ -130,9 +121,9 @@ export default function Home() {
                 Estoy disponible para encargos en todo el país. Contactame para hablar sobre tu proyecto.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:contacto@nicogiraldez.com.ar" className={buttonVariants({ size: "lg" })}>
+                <a href={`mailto:${site.contact.email}`} className={buttonVariants({ size: "lg" })}>
                   <Mail className="mr-2 h-4 w-4" />
-                  contacto@nicogiraldez.com.ar
+                  {site.contact.email}
                 </a>
                 <Link href="/contact" className={buttonVariants({ variant: "outline", size: "lg" })}>
                   Formulario de Contacto
@@ -153,15 +144,11 @@ export default function Home() {
             © {new Date().getFullYear()} Nico Giraldez. Todos los derechos reservados.
           </div>
           <nav className="flex gap-6">
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-              Instagram
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-              LinkedIn
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-              Behance
-            </Link>
+            {site.social.map((s) => (
+              <Link key={s.label} href={s.url} className="text-sm font-medium hover:underline underline-offset-4">
+                {s.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </footer>
