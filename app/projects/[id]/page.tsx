@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Calendar, MapPin } from "lucide-react"
-import { use } from "react"
+import { use, useRef } from "react"
 
 import projects from "@/data/projects.json"
 import site from "@/data/site.json"
@@ -11,7 +11,7 @@ import site from "@/data/site.json"
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
-import { ImageGallery } from "@/components/image-gallery"
+import { ImageGallery, type ImageGalleryHandle } from "@/components/image-gallery"
 
 export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -19,6 +19,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   const relatedProjects = (project.related ?? [])
     .map((rid) => projects.find((p) => p.id === rid))
     .filter(Boolean) as typeof projects
+  const galleryRef = useRef<ImageGalleryHandle>(null)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -48,20 +49,14 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
               <div
                 className="aspect-[16/9] relative rounded-lg overflow-hidden mb-8 cursor-pointer"
-                onClick={() => {
-                  const galleryComponent = document.querySelector("[data-gallery-component]")
-                  if (galleryComponent) {
-                    ; (galleryComponent as any).openMainImage()
-                  }
-                }}
+                onClick={() => galleryRef.current?.open(0)}
               >
                 <Image
                   src={project.mainImage || "/placeholder.svg?height=1080&width=1920"}
                   alt={project.title}
                   fill
                   priority
-                  className={`transition-transform duration-300 ${project.id === "3" ? "object-contain object-bottom hover:scale-105" : "object-cover hover:scale-105"
-                    }`}
+                  className={`transition-transform duration-300 ${project.portrait ? "object-contain object-bottom hover:scale-105" : "object-cover hover:scale-105"}`}
                 />
               </div>
 
@@ -69,7 +64,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                 <p>{project.description}</p>
               </div>
 
-              <ImageGallery images={project.images} alt={project.title} mainImage={project.mainImage} portrait={project.portrait ?? false} />
+              <ImageGallery ref={galleryRef} images={project.images} alt={project.title} mainImage={project.mainImage} portrait={project.portrait ?? false} />
             </div>
 
             <div>

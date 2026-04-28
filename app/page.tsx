@@ -71,7 +71,7 @@ export default function Home() {
                       src={project.mainImage || "/placeholder.svg?height=800&width=1200"}
                       alt={project.title}
                       fill
-                      className={`${project.id === "3" ? "object-contain object-bottom" : "object-cover"
+                      className={`${project.portrait ? "object-contain object-bottom" : "object-cover"
                         } transition-transform duration-300 group-hover:scale-105`}
                     />
                   </div>
