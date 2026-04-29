@@ -27,6 +27,7 @@ export interface SocialLink {
 }
 
 export interface SiteData {
+  maintenanceMode?: boolean
   about: {
     name: string
     role: string

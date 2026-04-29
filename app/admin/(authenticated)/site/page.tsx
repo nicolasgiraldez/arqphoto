@@ -70,6 +70,24 @@ export default function SitePage() {
     <form onSubmit={handleSave} className="space-y-10 max-w-2xl">
       <h1 className="text-2xl font-semibold">Datos del Sitio</h1>
 
+      <Section title="Modo mantenimiento">
+        <label className="flex items-center gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={site.maintenanceMode ?? false}
+            onChange={e => setSite(prev => prev ? { ...prev, maintenanceMode: e.target.checked } : prev)}
+            className="w-4 h-4 rounded border"
+          />
+          <div>
+            <span className="text-sm font-medium">Activar modo mantenimiento</span>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              El sitio público mostrará solo el logo, un mensaje de construcción y datos de contacto.
+              El panel de admin seguirá accesible.
+            </p>
+          </div>
+        </label>
+      </Section>
+
       <Section title="Sobre mí">
         <div className="grid grid-cols-2 gap-4">
           <Field label="Nombre">
