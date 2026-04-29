@@ -1,30 +1,53 @@
 [
   {
-    "id": "1",
     "title": "Bonifacio",
     "location": "Caballito, Buenos Aires",
     "category": "Residencial",
     "year": "2023",
     "client": "TUCO.arq",
-    "description": "",
-    "mainImage": "/images/pabellon-cristal.jpeg",
+    "description": "Reportaje fotográfico de una reforma integral con cocina-isla como protagonista, living-comedor, dormitorio principal, dos cuartos infantiles, toilette y baño. La sesión registra la atmósfera del proyecto a través de la luz natural, los revestimientos y los detalles en madera y cobre.",
+    "mainImage": "/images/bonifacio-cocina-general.jpg",
     "images": [
-      "/images/pabellon-cristal.jpeg",
-      "/images/pabellon-cristal.jpeg",
-      "/images/pabellon-cristal.jpeg",
-      "/images/pabellon-cristal.jpeg"
+      "/images/bonifacio-cocina-hornos.jpg",
+      "/images/bonifacio-cocina-mesada.jpg",
+      "/images/bonifacio-cocina-vertical.jpg",
+      "/images/bonifacio-cocina-detalle.jpg",
+      "/images/bonifacio-cocina-tazas.jpg",
+      "/images/bonifacio-cocina-anafe.jpg",
+      "/images/bonifacio-cocina-bacha.jpg",
+      "/images/bonifacio-cocina-isla.jpg",
+      "/images/bonifacio-cocina-barra.jpg",
+      "/images/bonifacio-cocina-banquetas.jpg",
+      "/images/bonifacio-cocina-panoramica.jpg",
+      "/images/bonifacio-lavadero.jpg",
+      "/images/bonifacio-living.jpg",
+      "/images/bonifacio-comedor-cuadro.jpg",
+      "/images/bonifacio-comedor-mesa.jpg",
+      "/images/bonifacio-cuarto-mesa.jpg",
+      "/images/bonifacio-cuarto-puerta.jpg",
+      "/images/bonifacio-cuarto-cocinita.jpg",
+      "/images/bonifacio-cuarto-conejos.jpg",
+      "/images/bonifacio-cuarto-juguetes.jpg",
+      "/images/bonifacio-dormitorio-respaldo.jpg",
+      "/images/bonifacio-dormitorio-principal.jpg",
+      "/images/bonifacio-vestidor.jpg",
+      "/images/bonifacio-toilette-negro.jpg",
+      "/images/bonifacio-bano-colorido.jpg",
+      "/images/bonifacio-bano-detalle.jpg",
+      "/images/bonifacio-bano-lavatorio.jpg",
+      "/images/bonifacio-bano-vertical.jpg"
     ],
     "related": [
       "2",
       "4"
     ],
     "services": [
-      "Fotografía arquitectónica exterior",
-      "Documentación de espacios interiores",
-      "Fotografía de detalles",
-      "Fotografía al amanecer y atardecer",
-      "Imágenes editoriales para publicación"
-    ]
+      "Fotografía de interiores",
+      "Fotografía de detalles arquitectónicos",
+      "Documentación de proyecto completo"
+    ],
+    "portrait": false,
+    "id": "1"
   },
   {
     "id": "2",
