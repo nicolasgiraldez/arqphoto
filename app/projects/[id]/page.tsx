@@ -7,6 +7,7 @@ import { use, useRef } from "react"
 
 import projects from "@/data/projects.json"
 import site from "@/data/site.json"
+import { SiteFooter } from "@/components/site-footer"
 
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -139,11 +140,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           </div>
         </div>
       </main>
-      <footer className="border-t py-8">
-        <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {site.copyright}
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

@@ -1,27 +1,17 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Mail, MapPin, Linkedin } from "lucide-react"
+import { ArrowRight, MapPin } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { MobileNav } from "@/components/mobile-nav"
 import { HeroCarousel } from "@/components/hero-carousel"
+import { SiteFooter } from "@/components/site-footer"
 import site from "@/data/site.json"
 import allProjects from "@/data/projects.json"
 import featuredIds from "@/data/destacados.json"
 
 const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
-
-const socialIcons: Record<string, React.ReactNode> = {
-  Instagram: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  ),
-  LinkedIn: <Linkedin width={18} height={18} />,
-}
 
 export default function Home() {
   return (
@@ -90,7 +80,7 @@ export default function Home() {
               {destacados.map((project) => {
                 const cropClass =
                   project.crop === "top" ? "object-top" :
-                  project.crop === "bottom" ? "object-bottom" : "object-center"
+                    project.crop === "bottom" ? "object-bottom" : "object-center"
                 return (
                   <Link
                     key={project.id}
@@ -119,9 +109,9 @@ export default function Home() {
             </div>
 
             <div className="text-center" style={{ marginTop: "3rem" }}>
-              <Link href="/projects" className={cn(buttonVariants({ variant: "outline" }), "gap-2")}>
+              <Link href="/projects" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}>
                 Ver todos los proyectos
-                <ArrowRight className="h-[14px] w-[14px]" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -163,80 +153,20 @@ export default function Home() {
         <section id="contact" style={{ padding: "2.5rem 0" }}>
           <div className="container">
             <div className="mx-auto text-center" style={{ maxWidth: 640 }}>
-              <h2 style={{ fontSize: "clamp(1.625rem, 2.5vw, 2rem)", fontWeight: 600, letterSpacing: "-0.02em", margin: "0 0 0.75rem" }}>
+              <h2 style={{ fontSize: "clamp(1.625rem, 2.5vw, 2rem)", fontWeight: 600, letterSpacing: "-0.02em", margin: "0 0 1.75rem" }}>
                 Trabajemos juntos
               </h2>
-              <p className="text-muted-foreground" style={{ fontSize: "1.0625rem", margin: "0 0 1.75rem" }}>
-                Contactame para hablar sobre tu proyecto.
-              </p>
-              <div className="flex flex-wrap justify-center" style={{ gap: "0.75rem" }}>
-                <a href={`mailto:${site.contact.email}`} className={cn(buttonVariants(), "gap-2")}>
-                  <Mail className="h-[14px] w-[14px]" />
-                  {site.contact.email}
-                </a>
-                <Link href="/contact" className={cn(buttonVariants({ variant: "outline" }), "gap-2")}>
-                  Formulario de contacto
-                  <ArrowRight className="h-[14px] w-[14px]" />
-                </Link>
-              </div>
+              <Link href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}>
+                Contactame para hablar sobre tu proyecto
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
 
       </main>
 
-      {/* FOOTER */}
-      <footer style={{ padding: "2.5rem 0 2rem" }}>
-        <div className="container">
-          <div
-            className="flex flex-col md:flex-row items-center justify-between"
-            style={{ gap: "1rem", borderTop: "1px solid hsl(var(--border))", paddingTop: "2rem" }}
-          >
-            <div className="flex items-center" style={{ gap: "0.75rem" }}>
-              {/* Brand mark: 35×32 */}
-              <span aria-hidden="true" style={{ width: 35, height: 32, flexShrink: 0, display: "block" }}>
-                <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%", display: "block" }}>
-                  <rect width="220" height="200" fill="#0f172a" />
-                  <path d="M 147.4 0 A 195 195 0 0 1 147.4 200" fill="none" stroke="#ffffff" strokeWidth="14" strokeLinecap="butt" />
-                  <path d="M 0 67.7 A 38 38 0 0 1 0 132.3" fill="none" stroke="#ffffff" strokeWidth="14" strokeLinecap="butt" />
-                  <line x1="188" y1="100" x2="220" y2="100" stroke="#ffffff" strokeWidth="16" strokeLinecap="butt" />
-                  <text x="92.5" y="124" textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="86" letterSpacing="-2" fill="#ffffff">Ng</text>
-                </svg>
-              </span>
-              {/* Wordmark: 97×32 */}
-              <svg width="97" height="32" viewBox="0 0 92 30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nico Giraldez Fotografía">
-                <text x="0" y="13" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="14" letterSpacing="-0.35" textLength="92" lengthAdjust="spacing" fill="#0f172a">Nico Giraldez</text>
-                <text x="0" y="27" fontFamily="Inter, sans-serif" fontWeight="500" fontSize="11" letterSpacing="0" textLength="92" lengthAdjust="spacing" fill="#64748b">fotografía</text>
-              </svg>
-            </div>
-            <div className="text-muted-foreground" style={{ fontSize: "0.875rem" }}>
-              © {new Date().getFullYear()} {site.copyright}
-            </div>
-            <nav className="flex" style={{ gap: "0.75rem" }}>
-              {site.social.map((s) => (
-                <Link
-                  key={s.label}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="inline-flex items-center justify-center transition-colors hover:bg-muted"
-                  style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: "50%",
-                    border: "1px solid hsl(var(--muted-foreground) / 0.4)",
-                  }}
-                >
-                  {socialIcons[s.label] ?? (
-                    <span style={{ fontSize: "0.75rem", fontWeight: 500 }}>{s.label}</span>
-                  )}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
 
     </div>
   )

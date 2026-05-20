@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft, Mail, MapPin } from "lucide-react"
+import { SiteFooter } from "@/components/site-footer"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -85,11 +86,7 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
-      <footer className="border-t py-8">
-        <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {site.copyright}
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
