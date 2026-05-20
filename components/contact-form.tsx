@@ -55,7 +55,7 @@ export function ContactForm() {
 
   return (
     <div className="bg-muted p-6 rounded-lg">
-      <h2 className="text-xl font-semibold mb-6">Enviame un mensaje</h2>
+      <h2 className="text-xl font-semibold mb-6">Dejame un mensaje</h2>
       <form className="grid gap-6" onSubmit={handleSubmit}>
         <div className="grid gap-2">
           <Label htmlFor="name">Nombre</Label>
@@ -85,7 +85,7 @@ export function ContactForm() {
           <Textarea
             id="message"
             name="message"
-            placeholder="Contame sobre tu proyecto, plazos y cualquier requisito específico"
+            placeholder="Contame sobre tu proyecto, plazos y cualquier requisito específico."
             rows={6}
             required
           />
