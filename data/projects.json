@@ -139,5 +139,132 @@
       "Narrativa visual arquitectónica",
       "Documentación de transformación urbana"
     ]
+  },
+  {
+    "id": "5",
+    "title": "Pasaje Palermo",
+    "location": "Palermo, Buenos Aires",
+    "category": "Residencial",
+    "year": "2024",
+    "client": "Estudio Interior BA",
+    "description": "Reportaje fotográfico de una reforma residencial en un pasaje de Palermo, con foco en la relación entre living, cocina y baño. La serie registra la luz natural, la calidez de las carpinterías de madera, las superficies minerales y los detalles de terminación pensados para comunicar el carácter habitable del proyecto.",
+    "mainImage": "/images/palermo-pasaje-living.png",
+    "images": [
+      "/images/palermo-pasaje-living.png",
+      "/images/palermo-pasaje-cocina.png",
+      "/images/palermo-pasaje-bano.png"
+    ],
+    "related": [
+      "1",
+      "2",
+      "4"
+    ],
+    "services": [
+      "Fotografía de interiores",
+      "Fotografía de detalles arquitectónicos",
+      "Documentación de reforma residencial"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Hotel San Telmo",
+    "location": "San Telmo, Buenos Aires",
+    "category": "Comercial",
+    "year": "2024",
+    "client": "Distrito Hoteles",
+    "description": "Producción fotográfica para un hotel boutique en un edificio histórico recuperado. Las imágenes combinan vistas generales y escenas de detalle para documentar lobby, suite y terraza, con una mirada orientada a arquitectura, hospitalidad y comunicación comercial.",
+    "mainImage": "/images/hotel-san-telmo-lobby.png",
+    "carouselImage": "/images/hotel-san-telmo-terraza.png",
+    "images": [
+      "/images/hotel-san-telmo-lobby.png",
+      "/images/hotel-san-telmo-suite.png",
+      "/images/hotel-san-telmo-terraza.png"
+    ],
+    "related": [
+      "3",
+      "5",
+      "8"
+    ],
+    "services": [
+      "Fotografía de interiores comerciales",
+      "Fotografía para real estate y marketing",
+      "Documentación de proyecto completo"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Oficinas Puerto Madero",
+    "location": "Puerto Madero, Buenos Aires",
+    "category": "Comercial",
+    "year": "2024",
+    "client": "Nodo Workplace",
+    "description": "Registro de oficinas corporativas con espacios flexibles, salas de reunión y áreas de descanso. La cobertura prioriza la lectura espacial, el diseño de mobiliario, los materiales acústicos y la atmósfera de trabajo para piezas institucionales y de portfolio.",
+    "mainImage": "/images/oficinas-puerto-madero-workspace.png",
+    "images": [
+      "/images/oficinas-puerto-madero-workspace.png",
+      "/images/oficinas-puerto-madero-sala.png",
+      "/images/oficinas-puerto-madero-lounge.png"
+    ],
+    "related": [
+      "6",
+      "8"
+    ],
+    "services": [
+      "Fotografía de interiores comerciales",
+      "Fotografía de mobiliario a medida",
+      "Documentación para comunicación institucional"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Biblioteca Parque Patricios",
+    "location": "Parque Patricios, Buenos Aires",
+    "category": "Institucional",
+    "year": "2025",
+    "client": "Espacio Público BA",
+    "description": "Cobertura fotográfica de una biblioteca pública contemporánea, articulada entre sala de lectura, patio exterior y detalles de circulación. La serie pone en valor la escala cívica, el uso de hormigón y madera, y la manera en que la luz natural ordena la experiencia del edificio.",
+    "mainImage": "/images/biblioteca-parque-patricios-sala.png",
+    "carouselImage": "/images/biblioteca-parque-patricios-patio.png",
+    "images": [
+      "/images/biblioteca-parque-patricios-sala.png",
+      "/images/biblioteca-parque-patricios-patio.png",
+      "/images/biblioteca-parque-patricios-escalera.png"
+    ],
+    "related": [
+      "3",
+      "6",
+      "7"
+    ],
+    "services": [
+      "Fotografía de arquitectura institucional",
+      "Fotografía de exteriores",
+      "Narrativa visual arquitectónica"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Viviendas Escobar",
+    "location": "Escobar, Buenos Aires",
+    "category": "Residencial",
+    "year": "2025",
+    "client": "Habitar Norte",
+    "description": "Documentación de un conjunto residencial de baja escala con espacios comunes, terrazas y paisaje nativo. La producción combina fotografía exterior, vista aérea de implantación y registro de amenities para mostrar la relación entre arquitectura, entorno y vida comunitaria.",
+    "mainImage": "/images/viviendas-escobar-exterior.png",
+    "carouselImage": "/images/viviendas-escobar-aerea.png",
+    "images": [
+      "/images/viviendas-escobar-exterior.png",
+      "/images/viviendas-escobar-aerea.png",
+      "/images/viviendas-escobar-amenity.png"
+    ],
+    "related": [
+      "5",
+      "7",
+      "8"
+    ],
+    "services": [
+      "Fotografía de exteriores",
+      "Fotografía aérea con dron",
+      "Fotografía para real estate y marketing"
+    ]
   }
 ]
