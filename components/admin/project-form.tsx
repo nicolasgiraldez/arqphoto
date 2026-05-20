@@ -127,6 +127,7 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
     architect: initialData?.architect ?? '',
     description: initialData?.description ?? '',
     mainImage: initialData?.mainImage ?? '',
+    carouselImage: initialData?.carouselImage ?? '',
     images: initialData?.images ?? [] as string[],
     related: initialData?.related ?? [] as string[],
     services: initialData?.services ?? [] as string[],
@@ -176,6 +177,7 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
     }
     if (form.architect) payload.architect = form.architect
     if (form.crop) payload.crop = form.crop as Project['crop']
+    if (form.carouselImage) payload.carouselImage = form.carouselImage
 
     const url = mode === 'create' ? '/api/admin/projects' : `/api/admin/projects/${initialData!.id}`
     const method = mode === 'create' ? 'POST' : 'PUT'
@@ -253,6 +255,17 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
           Imagen principal
         </h2>
         <InlineImagePicker value={form.mainImage} onSelect={url => set('mainImage', url)} label="" />
+      </section>
+
+      {/* Imagen para carrusel */}
+      <section className="space-y-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground border-b pb-2">
+          Imagen para carrusel
+        </h2>
+        <p className="text-xs text-muted-foreground">
+          Opcional. Si se deja vacío se usa la imagen principal.
+        </p>
+        <InlineImagePicker value={form.carouselImage} onSelect={url => set('carouselImage', url)} label="" />
       </section>
 
       {/* Galería */}

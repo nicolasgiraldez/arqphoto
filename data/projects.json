@@ -6,7 +6,7 @@
     "year": "2023",
     "client": "TUCO.arq",
     "description": "Reportaje fotográfico de una reforma integral con cocina-isla como protagonista, living-comedor, dormitorio principal, dos cuartos infantiles, toilette y baño. La sesión registra la atmósfera del proyecto a través de la luz natural, los revestimientos y los detalles en madera y cobre.",
-    "mainImage": "/images/bonifacio-cocina-general.jpg",
+    "mainImage": "/images/bonifacio-cocina-hornos.jpg",
     "images": [
       "/images/bonifacio-cocina-hornos.jpg",
       "/images/bonifacio-cocina-mesada.jpg",
@@ -47,7 +47,40 @@
       "Documentación de proyecto completo"
     ],
     "portrait": false,
+    "carouselImage": "/images/bonifacio-cocina-general.jpg",
     "id": "1"
+  },
+  {
+    "title": "Quirno",
+    "location": "Flores, Buenos Aires",
+    "category": "Residencial",
+    "year": "2023",
+    "client": "TUCO.arq",
+    "description": "Este proyecto muestra la renovación integral de una casa en el barrio de Flores. La intervención destaca por el uso de murales botánicos de gran formato que aportan personalidad y color a los espacios, combinados con elementos de diseño contemporáneo como carpintería acanalada, pisos geométricos y modernos placards. El contraste entre los tonos neutros de la base arquitectónica y los acentos coloridos de los murales y accesorios crea un ambiente vibrante y acogedor.",
+    "mainImage": "/images/quirno-9.jpeg",
+    "images": [
+      "/images/quirno-2.jpeg",
+      "/images/quirno-3.jpeg",
+      "/images/quirno-4.jpeg",
+      "/images/quirno-5.jpeg",
+      "/images/quirno-6.jpeg",
+      "/images/quirno-7.jpeg",
+      "/images/quirno-8.jpeg",
+      "/images/quirno-9.jpeg"
+    ],
+    "related": [
+      "1",
+      "2"
+    ],
+    "services": [
+      "Fotografía de interiores residenciales",
+      "Documentación de proyecto de renovación",
+      "Fotografía de detalles decorativos",
+      "Fotografía de mobiliario a medida"
+    ],
+    "portrait": false,
+    "carouselImage": "/images/quirno-5.jpeg",
+    "id": "4"
   },
   {
     "id": "2",
@@ -98,265 +131,13 @@
     ],
     "portrait": true,
     "crop": "bottom",
-    "related": [
-      "9"
-    ],
+    "related": [],
     "services": [
       "Fotografía arquitectónica urbana",
       "Documentación de patrimonio histórico",
       "Fotografía de contraste urbano",
       "Narrativa visual arquitectónica",
       "Documentación de transformación urbana"
-    ]
-  },
-  {
-    "id": "4",
-    "title": "Quirno",
-    "location": "Flores, Buenos Aires",
-    "category": "Residencial",
-    "year": "2023",
-    "client": "TUCO.arq",
-    "description": "Este proyecto muestra la renovación integral de una casa en el barrio de Flores. La intervención destaca por el uso de murales botánicos de gran formato que aportan personalidad y color a los espacios, combinados con elementos de diseño contemporáneo como carpintería acanalada, pisos geométricos y modernos placards. El contraste entre los tonos neutros de la base arquitectónica y los acentos coloridos de los murales y accesorios crea un ambiente vibrante y acogedor.",
-    "mainImage": "/images/quirno-1.jpeg",
-    "images": [
-      "/images/quirno-2.jpeg",
-      "/images/quirno-3.jpeg",
-      "/images/quirno-4.jpeg",
-      "/images/quirno-5.jpeg",
-      "/images/quirno-6.jpeg",
-      "/images/quirno-7.jpeg",
-      "/images/quirno-8.jpeg",
-      "/images/quirno-9.jpeg"
-    ],
-    "related": [
-      "1",
-      "2"
-    ],
-    "services": [
-      "Fotografía de interiores residenciales",
-      "Documentación de proyecto de renovación",
-      "Fotografía de detalles decorativos",
-      "Fotografía de mobiliario a medida"
-    ]
-  },
-  {
-    "id": "5",
-    "title": "Renovación Histórica",
-    "location": "Mendoza, Argentina",
-    "category": "Cultural",
-    "year": "2022",
-    "client": "Municipalidad de Mendoza",
-    "architect": "Estudio Histórico Mendocino",
-    "description": "Este proyecto de renovación histórica en Mendoza recupera un edificio patrimonial del siglo XIX, adaptándolo a usos contemporáneos mientras preserva sus elementos arquitectónicos originales. La intervención respeta la historia del edificio a la vez que incorpora tecnologías modernas para garantizar su funcionalidad y sostenibilidad para las generaciones futuras.",
-    "mainImage": "/images/renovacion-historica.jpeg",
-    "images": [
-      "/images/renovacion-historica.jpeg",
-      "/images/renovacion-historica.jpeg",
-      "/images/renovacion-historica.jpeg",
-      "/images/renovacion-historica.jpeg"
-    ],
-    "related": [
-      "1",
-      "7"
-    ],
-    "services": [
-      "Fotografía de patrimonio histórico",
-      "Documentación de proceso de restauración",
-      "Fotografía de detalles arquitectónicos históricos",
-      "Fotografía de contraste entre lo antiguo y lo nuevo",
-      "Imágenes para publicaciones especializadas en patrimonio"
-    ]
-  },
-  {
-    "id": "6",
-    "title": "Complejo Habitacional Sustentable",
-    "location": "Bariloche, Argentina",
-    "category": "Residencial",
-    "year": "2023",
-    "client": "Cooperativa Vivienda Verde",
-    "architect": "Estudio Patagonia Sostenible",
-    "description": "Este innovador complejo habitacional en Bariloche integra principios de sustentabilidad y eficiencia energética adaptados al clima patagónico. El diseño aprovecha materiales locales y técnicas de construcción que minimizan el impacto ambiental, mientras maximiza el confort térmico y la integración con el paisaje natural circundante.",
-    "mainImage": "/images/complejo-sustentable.jpeg",
-    "images": [
-      "/images/complejo-sustentable.jpeg",
-      "/images/complejo-sustentable.jpeg",
-      "/images/complejo-sustentable.jpeg",
-      "/images/complejo-sustentable.jpeg"
-    ],
-    "related": [
-      "10"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Documentación de sistemas sustentables",
-      "Fotografía de integración con el paisaje",
-      "Fotografía de detalles constructivos",
-      "Imágenes para publicaciones de arquitectura sustentable"
-    ]
-  },
-  {
-    "id": "7",
-    "title": "Museo de Arte Moderno",
-    "location": "Salta, Argentina",
-    "category": "Cultural",
-    "year": "2021",
-    "client": "Gobierno de Salta",
-    "architect": "Estudio Noroeste Arquitectura",
-    "description": "El Museo de Arte Moderno de Salta es una intervención arquitectónica de gran audacia formal que dialoga con el paisaje andino circundante. Sus volúmenes geométricos y fachadas de hormigón visto generan juegos de luz y sombra que cambian a lo largo del día, convirtiendo al edificio en una obra de arte en sí mismo.",
-    "mainImage": "/images/museo-arte-moderno.jpeg",
-    "images": [
-      "/images/museo-arte-moderno.jpeg",
-      "/images/museo-arte-moderno.jpeg",
-      "/images/museo-arte-moderno.jpeg",
-      "/images/museo-arte-moderno.jpeg"
-    ],
-    "related": [
-      "1",
-      "5"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Fotografía de espacios expositivos",
-      "Fotografía de detalles constructivos",
-      "Fotografía al amanecer y atardecer",
-      "Imágenes editoriales para publicación"
-    ]
-  },
-  {
-    "id": "8",
-    "title": "Hotel de Lujo",
-    "location": "Ushuaia, Argentina",
-    "category": "Comercial",
-    "year": "2022",
-    "client": "Grupo Hotelero Austral",
-    "architect": "Estudio Fin del Mundo",
-    "description": "Este hotel de lujo en Ushuaia aprovecha el dramático paisaje fueguino para crear una experiencia de hospedaje única. La arquitectura se integra con el entorno natural mediante el uso de materiales locales como la madera de lenga y la piedra patagónica, mientras grandes ventanales enmarcan vistas al Canal Beagle y las montañas.",
-    "mainImage": "/images/hotel-lujo.jpeg",
-    "images": [
-      "/images/hotel-lujo.jpeg",
-      "/images/hotel-lujo.jpeg",
-      "/images/hotel-lujo.jpeg",
-      "/images/hotel-lujo.jpeg"
-    ],
-    "related": [
-      "11",
-      "6"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Fotografía de habitaciones y espacios comunes",
-      "Fotografía de integración con el paisaje",
-      "Fotografía gastronómica y de amenidades",
-      "Imágenes para marketing hotelero"
-    ]
-  },
-  {
-    "id": "9",
-    "title": "Pabellón de Parque Urbano",
-    "location": "La Plata, Argentina",
-    "category": "Espacios Públicos",
-    "year": "2023",
-    "client": "Municipalidad de La Plata",
-    "architect": "Estudio Ciudad Nueva",
-    "description": "El Pabellón de Parque Urbano de La Plata es una estructura liviana y permeable diseñada para activar el espacio público. Su cubierta metálica plegada y sus pilares delgados crean un refugio abierto que invita a la permanencia sin interrumpir las visuales del parque, convirtiéndose en punto de encuentro para la comunidad.",
-    "mainImage": "/images/parque-urbano.jpeg",
-    "images": [
-      "/images/parque-urbano.jpeg",
-      "/images/parque-urbano.jpeg",
-      "/images/parque-urbano.jpeg",
-      "/images/parque-urbano.jpeg"
-    ],
-    "related": [
-      "12",
-      "1"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior",
-      "Fotografía de espacio público y usuarios",
-      "Fotografía de detalles estructurales",
-      "Fotografía de integración con el entorno",
-      "Imágenes para publicaciones de arquitectura pública"
-    ]
-  },
-  {
-    "id": "10",
-    "title": "Refugio de Montaña",
-    "location": "San Martín de los Andes, Argentina",
-    "category": "Residencial",
-    "year": "2021",
-    "client": "Privado",
-    "architect": "Estudio Cordillera",
-    "description": "Este refugio de montaña en San Martín de los Andes combina la tradición constructiva de la región con una sensibilidad contemporánea. La madera y la piedra son los materiales protagonistas, mientras que grandes ventanales orientados al lago permiten disfrutar del paisaje patagónico desde el interior con máximo confort térmico.",
-    "mainImage": "/images/refugio-montana.jpeg",
-    "images": [
-      "/images/refugio-montana.jpeg",
-      "/images/refugio-montana.jpeg",
-      "/images/refugio-montana.jpeg",
-      "/images/refugio-montana.jpeg"
-    ],
-    "related": [
-      "6"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Fotografía de integración con el paisaje natural",
-      "Fotografía de detalles en madera y piedra",
-      "Fotografía en distintas condiciones climáticas",
-      "Imágenes para publicaciones de arquitectura residencial"
-    ]
-  },
-  {
-    "id": "11",
-    "title": "Sede Corporativa",
-    "location": "Buenos Aires, Argentina",
-    "category": "Comercial",
-    "year": "2022",
-    "client": "Corporación Río de la Plata",
-    "architect": "Estudio Metrópolis BA",
-    "description": "La sede corporativa de este grupo empresarial en el microcentro porteño redefine la imagen institucional a través de una arquitectura de vidrio y acero que transmite transparencia y modernidad. Los espacios de trabajo abiertos y flexibles favorecen la colaboración, mientras la terraza jardín en el último piso ofrece un oasis verde en el corazón de la ciudad.",
-    "mainImage": "/images/sede-corporativa.jpeg",
-    "images": [
-      "/images/sede-corporativa.jpeg",
-      "/images/sede-corporativa.jpeg",
-      "/images/sede-corporativa.jpeg",
-      "/images/sede-corporativa.jpeg"
-    ],
-    "related": [
-      "8"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Fotografía de espacios de trabajo",
-      "Fotografía de detalles corporativos",
-      "Fotografía de áreas comunes y amenidades",
-      "Imágenes para comunicación institucional"
-    ]
-  },
-  {
-    "id": "12",
-    "title": "Biblioteca Pública",
-    "location": "Tucumán, Argentina",
-    "category": "Espacios Públicos",
-    "year": "2023",
-    "client": "Gobierno de Tucumán",
-    "architect": "Estudio Norte Grande",
-    "description": "La nueva Biblioteca Pública de Tucumán es un edificio cívico que apuesta por la arquitectura como herramienta de inclusión social. Sus espacios de lectura con doble altura, iluminados cenitalmente, crean ambientes propicios para el estudio y la concentración, mientras la fachada permeable invita a toda la comunidad a hacer uso de sus instalaciones.",
-    "mainImage": "/images/biblioteca-publica.jpeg",
-    "images": [
-      "/images/biblioteca-publica.jpeg",
-      "/images/biblioteca-publica.jpeg",
-      "/images/biblioteca-publica.jpeg",
-      "/images/biblioteca-publica.jpeg"
-    ],
-    "related": [
-      "9"
-    ],
-    "services": [
-      "Fotografía arquitectónica exterior e interior",
-      "Fotografía de espacios de lectura",
-      "Fotografía de detalles de iluminación natural",
-      "Fotografía de usuarios y comunidad",
-      "Imágenes para publicaciones de arquitectura pública"
     ]
   }
 ]

@@ -10,6 +10,7 @@ interface SlideProject {
   id: string
   title: string
   mainImage: string
+  carouselImage?: string
   category: string
   location: string
   crop?: string
@@ -87,7 +88,7 @@ export function HeroCarousel({ projects }: { projects: SlideProject[] }) {
                 aria-label={`Ver proyecto ${p.title}`}
               >
                 <Image
-                  src={p.mainImage}
+                  src={p.carouselImage ?? p.mainImage}
                   alt={p.title}
                   fill
                   className={cn("object-cover", cropClass(p.crop), "hc-img")}

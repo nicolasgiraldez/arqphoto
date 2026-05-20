@@ -14,6 +14,7 @@ export interface Project {
   architect?: string
   description: string
   mainImage: string
+  carouselImage?: string
   images: string[]
   related: string[]
   services: string[]

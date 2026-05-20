@@ -7,17 +7,19 @@
     "location": "Buenos Aires, Argentina",
     "locationNote": "",
     "bio": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      "Soy fotógrafo especializado en arquitectura y diseño, con una práctica que abarca proyectos residenciales y comerciales, tanto para documentación de obra como para marketing y real estate, además de registro de patrimonio cultural y arqueológico.",
+      "Ofrezco servicios en interiores, exteriores, entornos urbanos y fotografía aérea con dron, para una perspectiva que amplía las posibilidades narrativas de cada proyecto.",
+      "Trabajo con estudios de arquitectura y diseño, inmobiliarias, comercios, empresas, particulares, y organismos públicos y privados que necesitan imágenes que narren cada espacio con precisión y cuidado estético."
     ]
   },
   "contact": {
     "email": "contacto@nicogiraldez.com.ar",
     "phone": "+54 11 3432 7260",
+    "instagram": "nico.giraldez.foto",
     "location": "Buenos Aires, Argentina",
     "locationNote": "",
-    "photo": "/images/fotografo-locacion.jpeg"
+    "photo": "/images/fotografo-locacion.jpeg",
+    "availability": "Estoy disponible para trabajos de fotografía de arquitectura y diseño. Contactame para conversar sobre tu proyecto."
   },
   "hero": {
     "image": "/images/buenos-aires.jpg",
