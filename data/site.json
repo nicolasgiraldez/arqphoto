@@ -1,5 +1,5 @@
 {
-  "maintenanceMode": true,
+  "maintenanceMode": false,
   "about": {
     "name": "Nico Giraldez",
     "role": "Fotógrafo de Arquitectura",
@@ -25,19 +25,11 @@
     "title": "Fotografía de Arquitectura",
     "subtitle": "Buenos Aires, Argentina"
   },
-  "copyright": "Nico Giraldez Fotografía. Todos los derechos reservados.",
+  "copyright": "Todos los derechos reservados.",
   "social": [
     {
       "label": "Instagram",
-      "url": "#"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "#"
-    },
-    {
-      "label": "Behance",
-      "url": "#"
+      "url": "https://www.instagram.com/nico.giraldez.foto"
     }
   ]
 }
