@@ -1,30 +1,55 @@
 "use client"
 
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Menu, X } from "lucide-react"
+
+const links = [
+  { href: "/projects", label: "Proyectos" },
+  { href: "/#about", label: "Sobre mí" },
+  { href: "/contact", label: "Contacto" },
+]
 
 export function MobileNav() {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    if (open) document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [open])
+
   return (
-    <Sheet>
-      <SheetTrigger render={<Button variant="outline" size="icon" className="md:hidden" />}>
-        <Menu className="h-5 w-5" />
-        <span className="sr-only">Abrir menú</span>
-      </SheetTrigger>
-      <SheetContent side="right">
-        <nav className="flex flex-col gap-4 mt-8">
-          <Link href="#work" className="text-lg font-medium hover:underline underline-offset-4">
-            Proyectos
-          </Link>
-          <Link href="#about" className="text-lg font-medium hover:underline underline-offset-4">
-            Sobre Mí
-          </Link>
-          <Link href="#contact" className="text-lg font-medium hover:underline underline-offset-4">
-            Contacto
-          </Link>
-        </nav>
-      </SheetContent>
-    </Sheet>
+    <div ref={ref} className="relative md:hidden">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="flex items-center justify-center w-9 h-9 border border-border rounded-md hover:bg-muted transition-colors"
+        aria-label={open ? "Cerrar menú" : "Abrir menú"}
+      >
+        {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+      </button>
+
+      {open && (
+        <div
+          className="absolute right-0 top-[calc(100%+8px)] bg-background border border-border shadow-md z-50 min-w-[160px]"
+        >
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setOpen(false)}
+              className="block px-5 py-3 text-sm font-medium hover:bg-muted transition-colors border-b border-border/40 last:border-b-0"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
