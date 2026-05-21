@@ -89,12 +89,15 @@
   html {
     scroll-behavior: smooth;
   }
+
   [id] {
     scroll-margin-top: 88px;
   }
+
   * {
     border-color: hsl(var(--border));
   }
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
@@ -104,7 +107,7 @@
 /* ---- Typography ---- */
 .title-section {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -112,7 +115,7 @@
 
 .title-card {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -157,9 +160,15 @@
   animation: kenburns 12s ease-out forwards;
   animation-play-state: paused;
 }
+
 @keyframes kenburns {
-  from { transform: scale(1.04); }
-  to   { transform: scale(1.12); }
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.12);
+  }
 }
 
 .hc-dots-bar {
@@ -180,7 +189,7 @@
   z-index: 3;
   background: none;
   border: none;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   cursor: pointer;
   padding: 1rem 0.75rem;
   display: inline-flex;
@@ -188,15 +197,24 @@
   justify-content: center;
   transition: color 200ms ease;
 }
-.hc-btn:hover { color: #fff; }
-.hc-btn-prev { left: 0; }
-.hc-btn-next { right: 0; }
+
+.hc-btn:hover {
+  color: #fff;
+}
+
+.hc-btn-prev {
+  left: 0;
+}
+
+.hc-btn-next {
+  right: 0;
+}
 
 .hc-dot {
   width: 28px;
   height: 3px;
   border-radius: 2px;
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.35);
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -216,7 +234,11 @@
 }
 
 @keyframes hc-progress {
-  from { width: 0; }
-  to   { width: 100%; }
-}
+  from {
+    width: 0;
+  }
 
+  to {
+    width: 100%;
+  }
+}
