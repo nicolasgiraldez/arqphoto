@@ -140,7 +140,7 @@ export default async function Home() {
                     Sobre mí
                   </h2>
                   {site.about.bio.map((para, i) => (
-                    <p key={i} style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.875rem" }}>
+                    <p key={i} style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.875rem", textAlign: "justify", hyphens: "auto" }}>
                       {para}
                     </p>
                   ))}

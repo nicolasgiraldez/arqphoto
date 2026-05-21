@@ -64,7 +64,7 @@ export const ImageGallery = forwardRef<ImageGalleryHandle, ImageGalleryProps>(
           {images.map((image, index) => (
             <div
               key={index}
-              className={`${portrait ? "aspect-[3/4]" : "aspect-[4/3]"} relative rounded-lg overflow-hidden cursor-pointer`}
+              className={`${portrait ? "aspect-[3/4]" : "aspect-[4/3]"} relative overflow-hidden cursor-pointer`}
               onClick={() => open(mainImage ? index + 1 : index)}
             >
               <Image

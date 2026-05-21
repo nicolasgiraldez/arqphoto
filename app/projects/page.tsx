@@ -28,7 +28,7 @@ export default async function ProjectsPage() {
               <Link
                 key={project.id}
                 href={`/projects/${project.id}`}
-                className="group overflow-hidden rounded-lg border"
+                className="group overflow-hidden border"
               >
                 <div className={`aspect-[4/3] relative overflow-hidden`}>
                   <Image

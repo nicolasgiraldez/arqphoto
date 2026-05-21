@@ -63,11 +63,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                 images={project.images}
                 alt={project.title}
                 portrait={project.portrait ?? false}
+                description={project.description}
               />
-
-              <div className="prose max-w-none mb-8">
-                <p>{project.description}</p>
-              </div>
             </div>
 
             <div>
@@ -122,7 +119,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                       href={`/projects/${related.id}`}
                       className="group grid grid-cols-[80px_1fr] gap-3 items-center"
                     >
-                      <div className="aspect-square relative rounded overflow-hidden">
+                      <div className="aspect-square relative overflow-hidden">
                         <Image
                           src={related.mainImage || "/placeholder.svg?height=400&width=400"}
                           alt={related.title}

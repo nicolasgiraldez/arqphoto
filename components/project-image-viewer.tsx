@@ -9,15 +9,16 @@ interface Props {
   images: string[]
   alt: string
   portrait: boolean
+  description?: string
 }
 
-export function ProjectImageViewer({ mainImage, images, alt, portrait }: Props) {
+export function ProjectImageViewer({ mainImage, images, alt, portrait, description }: Props) {
   const galleryRef = useRef<ImageGalleryHandle>(null)
 
   return (
     <>
       <div
-        className="aspect-[16/9] relative rounded-lg overflow-hidden mb-8 cursor-pointer"
+        className="aspect-[16/9] relative overflow-hidden mb-8 cursor-pointer"
         onClick={() => galleryRef.current?.open(0)}
       >
         <Image
@@ -29,6 +30,9 @@ export function ProjectImageViewer({ mainImage, images, alt, portrait }: Props) 
           className={`transition-transform duration-300 ${portrait ? 'object-contain object-bottom hover:scale-105' : 'object-cover hover:scale-105'}`}
         />
       </div>
+      {description && (
+        <p style={{ margin: "1.75rem 0", fontSize: "1rem", lineHeight: 1.7 }}>{description}</p>
+      )}
       <ImageGallery ref={galleryRef} images={images} alt={alt} mainImage={mainImage} portrait={portrait} />
     </>
   )

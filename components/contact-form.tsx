@@ -72,11 +72,11 @@ export function ContactForm() {
               <SelectValue placeholder="Seleccioná el tipo de proyecto" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="residential">Residencial</SelectItem>
-              <SelectItem value="commercial">Comercial</SelectItem>
-              <SelectItem value="cultural">Cultural</SelectItem>
-              <SelectItem value="public">Espacios Públicos</SelectItem>
-              <SelectItem value="other">Otro</SelectItem>
+              <SelectItem value="Residencial">Residencial</SelectItem>
+              <SelectItem value="Comercial">Comercial</SelectItem>
+              <SelectItem value="Cultural">Cultural</SelectItem>
+              <SelectItem value="Espacios Públicos">Espacios Públicos</SelectItem>
+              <SelectItem value="Otro">Otro</SelectItem>
             </SelectContent>
           </Select>
         </div>
