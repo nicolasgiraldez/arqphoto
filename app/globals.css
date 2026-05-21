@@ -215,3 +215,9 @@
   from { width: 0; }
   to   { width: 100%; }
 }
+
+@media (max-width: 639px) {
+  .hc-dots { display: none; }
+  .hc-eyebrow { flex-direction: column; gap: 0.15rem; }
+  .hc-eyebrow-dot { display: none; }
+}
