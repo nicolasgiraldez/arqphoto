@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useImperativeHandle, forwardRef } from "react"
 import Image from "next/image"
-import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import { X } from "lucide-react"
 
 interface ImageGalleryProps {
   images: string[]
@@ -80,12 +80,13 @@ export const ImageGallery = forwardRef<ImageGalleryHandle, ImageGalleryProps>(
         {isOpen && selectedIndex !== null && (
           <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center" onClick={closeLightbox}>
             <div className="relative w-full h-full flex items-center justify-center">
+              {/* Close */}
               <button
                 onClick={closeLightbox}
-                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                className="absolute top-4 right-5 z-10 text-white/55 hover:text-white transition-colors"
                 aria-label="Cerrar"
               >
-                <X className="h-6 w-6" />
+                <X className="h-9 w-9" strokeWidth={1.5} />
               </button>
 
               <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center p-4" onClick={(e) => e.stopPropagation()}>
@@ -101,23 +102,30 @@ export const ImageGallery = forwardRef<ImageGalleryHandle, ImageGalleryProps>(
                 </div>
               </div>
 
+              {/* Prev */}
               <button
                 onClick={(e) => { e.stopPropagation(); navigateToImage(selectedIndex - 1) }}
-                className="absolute left-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                className="absolute left-0 top-1/2 -translate-y-1/2 p-3 text-white/55 hover:text-white transition-colors"
                 aria-label="Imagen anterior"
               >
-                <ChevronLeft className="h-8 w-8" />
+                <svg width="29" height="45" viewBox="0 0 36 56" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="30,4 6,28 30,52" />
+                </svg>
               </button>
 
+              {/* Next */}
               <button
                 onClick={(e) => { e.stopPropagation(); navigateToImage(selectedIndex + 1) }}
-                className="absolute right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                className="absolute right-0 top-1/2 -translate-y-1/2 p-3 text-white/55 hover:text-white transition-colors"
                 aria-label="Imagen siguiente"
               >
-                <ChevronRight className="h-8 w-8" />
+                <svg width="29" height="45" viewBox="0 0 36 56" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6,4 30,28 6,52" />
+                </svg>
               </button>
 
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              {/* Counter */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/55 text-sm">
                 {selectedIndex + 1} / {allImages.length}
               </div>
             </div>

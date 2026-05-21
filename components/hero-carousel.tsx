@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface SlideProject {
@@ -107,46 +106,37 @@ export function HeroCarousel({ projects }: { projects: SlideProject[] }) {
                 }}
               />
 
-              {/* Eyebrow */}
-              <div
-                className="absolute inset-x-0 bottom-0 z-[2] pointer-events-none text-white"
-                style={{ padding: "2rem 0 2.25rem" }}
-              >
-                <div className="container">
-                  <div className="hc-eyebrow">
-                    <span>{p.category}</span>
-                    <span className="hc-eyebrow-dot" />
-                    <span>{p.location}</span>
-                  </div>
-                </div>
-              </div>
             </article>
           )
         })}
 
-        {/* Controls: dots + prev/next */}
-        <div className="hc-controls">
-          <div className="hc-dots">
-            {projects.map((_, i) => (
-              <button
-                key={i}
-                className={`hc-dot${i === current ? " active" : ""}`}
-                onClick={() => goTo(i)}
-                aria-label={`Slide ${i + 1}`}
-              >
-                <span className="fill" />
-              </button>
-            ))}
-          </div>
-          <div className="flex items-center gap-2">
-            <button className="hc-btn" onClick={() => goTo(current - 1)} aria-label="Anterior">
-              <ChevronLeft className="h-4 w-4" />
+        {/* Dots — centered */}
+        <div className="hc-dots-bar">
+          {projects.map((_, i) => (
+            <button
+              key={i}
+              className={`hc-dot${i === current ? " active" : ""}`}
+              onClick={() => goTo(i)}
+              aria-label={`Slide ${i + 1}`}
+            >
+              <span className="fill" />
             </button>
-            <button className="hc-btn" onClick={() => goTo(current + 1)} aria-label="Siguiente">
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
+          ))}
         </div>
+
+        {/* Prev */}
+        <button className="hc-btn hc-btn-prev" onClick={() => goTo(current - 1)} aria-label="Anterior">
+          <svg width="29" height="45" viewBox="0 0 36 56" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="30,4 6,28 30,52" />
+          </svg>
+        </button>
+
+        {/* Next */}
+        <button className="hc-btn hc-btn-next" onClick={() => goTo(current + 1)} aria-label="Siguiente">
+          <svg width="29" height="45" viewBox="0 0 36 56" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6,4 30,28 6,52" />
+          </svg>
+        </button>
       </div>
     </div>
   )
