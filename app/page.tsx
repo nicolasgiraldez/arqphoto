@@ -7,13 +7,17 @@ import { cn } from "@/lib/utils"
 import { MobileNav } from "@/components/mobile-nav"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { SiteFooter } from "@/components/site-footer"
-import site from "@/data/site.json"
-import allProjects from "@/data/projects.json"
-import featuredIds from "@/data/destacados.json"
+import { readProjects, readSite, readDestacados } from "@/lib/data"
 
-const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
+export const dynamic = 'force-dynamic'
 
-export default function Home() {
+export default async function Home() {
+  const [allProjects, featuredIds, site] = await Promise.all([
+    readProjects(),
+    readDestacados(),
+    readSite(),
+  ])
+  const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
   return (
     <div className="flex min-h-screen flex-col">
 
@@ -92,6 +96,7 @@ export default function Home() {
                         src={project.mainImage || "/placeholder.svg"}
                         alt={project.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className={`object-cover ${cropClass} transition-transform duration-500 ease-in-out group-hover:scale-[1.04]`}
                       />
                     </div>

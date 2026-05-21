@@ -22,7 +22,7 @@ export function ContactForm() {
     data.set("project-type", projectType)
 
     try {
-      const res = await fetch("https://formspree.io/f/mdayrvgb", {
+      const res = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },

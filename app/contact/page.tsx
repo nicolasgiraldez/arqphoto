@@ -43,7 +43,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">WhatsApp</h3>
-                    <p className="text-muted-foreground">{site.contact.phone}</p>
+                    <a
+                      href={`https://wa.me/${site.contact.phone.replace(/[^0-9]/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:underline"
+                    >
+                      {site.contact.phone}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -8,7 +8,6 @@
     "description": "Reportaje fotográfico de una reforma integral con cocina-isla como protagonista, living-comedor, dormitorio principal, dos cuartos infantiles, toilette y baño. La sesión registra la atmósfera del proyecto a través de la luz natural, los revestimientos y los detalles en madera y cobre.",
     "mainImage": "/images/bonifacio-cocina-hornos.jpg",
     "images": [
-      "/images/bonifacio-cocina-hornos.jpg",
       "/images/bonifacio-cocina-mesada.jpg",
       "/images/bonifacio-cocina-vertical.jpg",
       "/images/bonifacio-cocina-detalle.jpg",
@@ -65,8 +64,7 @@
       "/images/quirno-5.jpeg",
       "/images/quirno-6.jpeg",
       "/images/quirno-7.jpeg",
-      "/images/quirno-8.jpeg",
-      "/images/quirno-9.jpeg"
+      "/images/quirno-8.jpeg"
     ],
     "related": [
       "1",
@@ -141,7 +139,6 @@
     ]
   },
   {
-    "id": "5",
     "title": "Pasaje Palermo",
     "location": "Palermo, Buenos Aires",
     "category": "Residencial",
@@ -150,7 +147,6 @@
     "description": "Reportaje fotográfico de una reforma residencial en un pasaje de Palermo, con foco en la relación entre living, cocina y baño. La serie registra la luz natural, la calidez de las carpinterías de madera, las superficies minerales y los detalles de terminación pensados para comunicar el carácter habitable del proyecto.",
     "mainImage": "/images/palermo-pasaje-living.png",
     "images": [
-      "/images/palermo-pasaje-living.png",
       "/images/palermo-pasaje-cocina.png",
       "/images/palermo-pasaje-bano.png"
     ],
@@ -163,10 +159,11 @@
       "Fotografía de interiores",
       "Fotografía de detalles arquitectónicos",
       "Documentación de reforma residencial"
-    ]
+    ],
+    "portrait": false,
+    "id": "5"
   },
   {
-    "id": "6",
     "title": "Hotel San Telmo",
     "location": "San Telmo, Buenos Aires",
     "category": "Comercial",
@@ -174,9 +171,7 @@
     "client": "Distrito Hoteles",
     "description": "Producción fotográfica para un hotel boutique en un edificio histórico recuperado. Las imágenes combinan vistas generales y escenas de detalle para documentar lobby, suite y terraza, con una mirada orientada a arquitectura, hospitalidad y comunicación comercial.",
     "mainImage": "/images/hotel-san-telmo-lobby.png",
-    "carouselImage": "/images/hotel-san-telmo-terraza.png",
     "images": [
-      "/images/hotel-san-telmo-lobby.png",
       "/images/hotel-san-telmo-suite.png",
       "/images/hotel-san-telmo-terraza.png"
     ],
@@ -189,10 +184,12 @@
       "Fotografía de interiores comerciales",
       "Fotografía para real estate y marketing",
       "Documentación de proyecto completo"
-    ]
+    ],
+    "portrait": false,
+    "carouselImage": "/images/hotel-san-telmo-terraza.png",
+    "id": "6"
   },
   {
-    "id": "7",
     "title": "Oficinas Puerto Madero",
     "location": "Puerto Madero, Buenos Aires",
     "category": "Comercial",
@@ -201,7 +198,6 @@
     "description": "Registro de oficinas corporativas con espacios flexibles, salas de reunión y áreas de descanso. La cobertura prioriza la lectura espacial, el diseño de mobiliario, los materiales acústicos y la atmósfera de trabajo para piezas institucionales y de portfolio.",
     "mainImage": "/images/oficinas-puerto-madero-workspace.png",
     "images": [
-      "/images/oficinas-puerto-madero-workspace.png",
       "/images/oficinas-puerto-madero-sala.png",
       "/images/oficinas-puerto-madero-lounge.png"
     ],
@@ -213,10 +209,11 @@
       "Fotografía de interiores comerciales",
       "Fotografía de mobiliario a medida",
       "Documentación para comunicación institucional"
-    ]
+    ],
+    "portrait": false,
+    "id": "7"
   },
   {
-    "id": "8",
     "title": "Biblioteca Parque Patricios",
     "location": "Parque Patricios, Buenos Aires",
     "category": "Institucional",
@@ -224,9 +221,7 @@
     "client": "Espacio Público BA",
     "description": "Cobertura fotográfica de una biblioteca pública contemporánea, articulada entre sala de lectura, patio exterior y detalles de circulación. La serie pone en valor la escala cívica, el uso de hormigón y madera, y la manera en que la luz natural ordena la experiencia del edificio.",
     "mainImage": "/images/biblioteca-parque-patricios-sala.png",
-    "carouselImage": "/images/biblioteca-parque-patricios-patio.png",
     "images": [
-      "/images/biblioteca-parque-patricios-sala.png",
       "/images/biblioteca-parque-patricios-patio.png",
       "/images/biblioteca-parque-patricios-escalera.png"
     ],
@@ -239,10 +234,12 @@
       "Fotografía de arquitectura institucional",
       "Fotografía de exteriores",
       "Narrativa visual arquitectónica"
-    ]
+    ],
+    "portrait": false,
+    "carouselImage": "/images/biblioteca-parque-patricios-patio.png",
+    "id": "8"
   },
   {
-    "id": "9",
     "title": "Viviendas Escobar",
     "location": "Escobar, Buenos Aires",
     "category": "Residencial",
@@ -250,9 +247,7 @@
     "client": "Habitar Norte",
     "description": "Documentación de un conjunto residencial de baja escala con espacios comunes, terrazas y paisaje nativo. La producción combina fotografía exterior, vista aérea de implantación y registro de amenities para mostrar la relación entre arquitectura, entorno y vida comunitaria.",
     "mainImage": "/images/viviendas-escobar-exterior.png",
-    "carouselImage": "/images/viviendas-escobar-aerea.png",
     "images": [
-      "/images/viviendas-escobar-exterior.png",
       "/images/viviendas-escobar-aerea.png",
       "/images/viviendas-escobar-amenity.png"
     ],
@@ -265,6 +260,9 @@
       "Fotografía de exteriores",
       "Fotografía aérea con dron",
       "Fotografía para real estate y marketing"
-    ]
+    ],
+    "portrait": false,
+    "carouselImage": "/images/viviendas-escobar-aerea.png",
+    "id": "9"
   }
 ]

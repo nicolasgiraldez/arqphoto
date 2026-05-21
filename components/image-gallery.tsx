@@ -25,15 +25,18 @@ export const ImageGallery = forwardRef<ImageGalleryHandle, ImageGalleryProps>(
     const open = useCallback((index: number) => {
       setSelectedIndex(index)
       setIsOpen(true)
-      document.body.style.overflow = "hidden"
     }, [])
 
     useImperativeHandle(ref, () => ({ open }), [open])
 
     const closeLightbox = useCallback(() => {
       setIsOpen(false)
-      document.body.style.overflow = "auto"
     }, [])
+
+    useEffect(() => {
+      document.body.style.overflow = isOpen ? 'hidden' : ''
+      return () => { document.body.style.overflow = '' }
+    }, [isOpen])
 
     const navigateToImage = useCallback((index: number) => {
       if (index < 0) setSelectedIndex(allImages.length - 1)

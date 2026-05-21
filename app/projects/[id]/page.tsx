@@ -1,26 +1,36 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Calendar, MapPin } from "lucide-react"
-import { use, useRef } from "react"
+import type { Metadata } from "next"
 
-import projects from "@/data/projects.json"
-import site from "@/data/site.json"
+import { readProjects } from "@/lib/data"
 import { SiteFooter } from "@/components/site-footer"
-
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
-import { ImageGallery, type ImageGalleryHandle } from "@/components/image-gallery"
+import { ProjectImageViewer } from "@/components/project-image-viewer"
 
-export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export const dynamic = 'force-dynamic'
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Metadata> {
+  const { id } = await params
+  const projects = await readProjects()
+  const project = projects.find(p => p.id === id)
+  return {
+    title: project ? `${project.title} | Nico Giraldez` : 'Proyecto | Nico Giraldez',
+    description: project?.description,
+  }
+}
+
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const projects = await readProjects()
   const project = projects.find((p) => p.id === id) || projects[0]
   const relatedProjects = (project.related ?? [])
     .map((rid) => projects.find((p) => p.id === rid))
     .filter(Boolean) as typeof projects
-  const galleryRef = useRef<ImageGalleryHandle>(null)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -48,24 +58,16 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                 </div>
               </div>
 
-              <div
-                className="aspect-[16/9] relative rounded-lg overflow-hidden mb-8 cursor-pointer"
-                onClick={() => galleryRef.current?.open(0)}
-              >
-                <Image
-                  src={project.mainImage || "/placeholder.svg?height=1080&width=1920"}
-                  alt={project.title}
-                  fill
-                  priority
-                  className={`transition-transform duration-300 ${project.portrait ? "object-contain object-bottom hover:scale-105" : "object-cover hover:scale-105"}`}
-                />
-              </div>
+              <ProjectImageViewer
+                mainImage={project.mainImage}
+                images={project.images}
+                alt={project.title}
+                portrait={project.portrait ?? false}
+              />
 
               <div className="prose max-w-none mb-8">
                 <p>{project.description}</p>
               </div>
-
-              <ImageGallery ref={galleryRef} images={project.images} alt={project.title} mainImage={project.mainImage} portrait={project.portrait ?? false} />
             </div>
 
             <div>
@@ -125,6 +127,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                           src={related.mainImage || "/placeholder.svg?height=400&width=400"}
                           alt={related.title}
                           fill
+                          sizes="80px"
                           className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
@@ -144,6 +147,3 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     </div>
   )
 }
-
-
-

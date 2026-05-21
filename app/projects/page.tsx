@@ -5,9 +5,12 @@ import { ArrowLeft } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { SiteFooter } from "@/components/site-footer"
-import projects from "@/data/projects.json"
+import { readProjects } from "@/lib/data"
 
-export default function ProjectsPage() {
+export const dynamic = 'force-dynamic'
+
+export default async function ProjectsPage() {
+  const projects = await readProjects()
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
@@ -32,6 +35,7 @@ export default function ProjectsPage() {
                     src={project.mainImage || "/placeholder.svg?height=800&width=1200"}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={`object-cover ${{ top: "object-top", bottom: "object-bottom", center: "object-center" }[project.crop ?? "center"] ?? "object-center"} transition-transform duration-300 group-hover:scale-105`}
                   />
                 </div>
