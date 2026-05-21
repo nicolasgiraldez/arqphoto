@@ -81,36 +81,31 @@ export default async function Home() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {destacados.map((project) => {
-                const cropClass =
-                  project.crop === "top" ? "object-top" :
-                    project.crop === "bottom" ? "object-bottom" : "object-center"
-                return (
-                  <Link
-                    key={project.id}
-                    href={`/projects/${project.id}`}
-                    className="group block transition-transform duration-200 ease-in-out hover:-translate-y-0.5"
-                  >
-                    <div className="relative overflow-hidden bg-muted" style={{ aspectRatio: "4/3" }}>
-                      <Image
-                        src={project.mainImage || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className={`object-cover ${cropClass} transition-transform duration-500 ease-in-out group-hover:scale-[1.04]`}
-                      />
+              {destacados.map((project) => (
+                <Link
+                  key={project.id}
+                  href={`/projects/${project.id}`}
+                  className="group overflow-hidden border"
+                >
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={project.mainImage || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className={`object-cover ${{ top: "object-top", bottom: "object-bottom", center: "object-center" }[project.crop ?? "center"] ?? "object-center"} transition-transform duration-300 group-hover:scale-105`}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
+                    <div className="flex gap-2 mt-2">
+                      <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{project.category}</span>
+                      <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{project.year}</span>
                     </div>
-                    <div style={{ padding: "1rem 0 0.5rem" }}>
-                      <h3 style={{ margin: 0, fontSize: "1.0625rem", fontWeight: 600, letterSpacing: "-0.01em" }}>
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground" style={{ margin: "0.25rem 0 0", fontSize: "0.875rem" }}>
-                        {project.location}
-                      </p>
-                    </div>
-                  </Link>
-                )
-              })}
+                  </div>
+                </Link>
+              ))}
             </div>
 
             <div className="text-center" style={{ marginTop: "3rem" }}>
