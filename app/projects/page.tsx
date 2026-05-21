@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Ir al Inicio
             </Link>
-            <h1 style={{ margin: "1.5rem 0 0", fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>Portfolio</h1>
+            <h1 className="title-section text-center mt-6">Portfolio</h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -40,7 +40,7 @@ export default async function ProjectsPage() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 style={{ fontSize: "1rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0 }}>{project.title}</h3>
+                  <h3 className="title-card">{project.title}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
                   <div className="flex gap-2 mt-2">
                     <span className="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold">

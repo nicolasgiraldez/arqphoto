@@ -52,7 +52,7 @@ export function ContactForm() {
 
   return (
     <div>
-      <h2 style={{ fontSize: "1rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 1.5rem", textAlign: "center" }}>Dejame un mensaje</h2>
+      <h2 className="title-card text-center mb-6">Dejame un mensaje</h2>
       <form className="grid gap-6" onSubmit={handleSubmit}>
         <div className="grid gap-2">
           <Label htmlFor="name">Nombre</Label>

@@ -101,6 +101,31 @@
   }
 }
 
+/* ---- Typography ---- */
+.title-section {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title-card {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.875rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
 .container {
   width: 100%;
   max-width: calc(1280px + 2rem);

@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
           <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
             <div>
-              <h1 style={{ fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 0.5rem" }}>{project.title}</h1>
+              <h1 className="title-section mb-2">{project.title}</h1>
               <div className="flex flex-wrap gap-4 mb-6 text-muted-foreground">
                 <div className="flex items-center">
                   <MapPin className="mr-1 h-4 w-4" />

@@ -74,12 +74,10 @@ export default async function Home() {
         <HeroCarousel projects={destacados} />
 
         {/* PROYECTOS DESTACADOS */}
-        <section id="work" style={{ padding: "5rem 0 2.5rem" }}>
+        <section id="work" className="pt-20 pb-10">
           <div className="container">
-            <div style={{ marginBottom: "2.5rem" }}>
-              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
-                Proyectos destacados
-              </h2>
+            <div className="mb-10">
+              <h2 className="title-section text-center">Proyectos destacados</h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -99,7 +97,7 @@ export default async function Home() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 style={{ fontSize: "1rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0 }}>{project.title}</h3>
+                    <h3 className="title-card">{project.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
                     <div className="flex gap-2 mt-2">
                       <span className="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold">{project.category}</span>
@@ -110,7 +108,7 @@ export default async function Home() {
               ))}
             </div>
 
-            <div className="text-center" style={{ marginTop: "3rem" }}>
+            <div className="text-center mt-12">
               <Link href="/projects" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}>
                 Ver todos los proyectos
                 <ArrowRight className="h-4 w-4" />
@@ -120,22 +118,20 @@ export default async function Home() {
         </section>
 
         {/* SOBRE MÍ */}
-        <section id="about" style={{ padding: "2.5rem 0" }}>
+        <section id="about" className="py-10">
           <div className="container">
-            <div style={{ marginBottom: "2.5rem" }}>
-              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
-                Sobre mí
-              </h2>
+            <div className="mb-10">
+              <h2 className="title-section text-center">Sobre mí</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-start gap-10 md:gap-14">
               <div>
-                <div style={{ marginBottom: "1.25rem" }}>
-                  <p style={{ fontWeight: 600, fontSize: "1.25rem", margin: "0 0 0.25rem" }}>{site.about.name}</p>
-                  <p className="text-muted-foreground" style={{ fontSize: "1rem", margin: "0 0 0.125rem" }}>{site.about.role}</p>
-                  <p className="text-muted-foreground" style={{ fontSize: "1rem", margin: 0 }}>{site.about.location}</p>
+                <div className="mb-5">
+                  <p className="title-card mb-1">{site.about.name}</p>
+                  <p className="text-muted-foreground mb-0.5">{site.about.role}</p>
+                  <p className="text-muted-foreground">{site.about.location}</p>
                 </div>
                 {site.about.bio.map((para, i) => (
-                  <p key={i} style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.875rem", textAlign: "justify", hyphens: "auto" }}>
+                  <p key={i} className="bio-text">
                     {para}
                   </p>
                 ))}
@@ -153,16 +149,14 @@ export default async function Home() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contact" style={{ padding: "2.5rem 0" }}>
+        <section id="contact" className="py-10">
           <div className="container">
-            <div style={{ marginBottom: "2.5rem" }}>
-              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
-                Contactame
-              </h2>
+            <div className="mb-10">
+              <h2 className="title-section text-center">Contactame</h2>
             </div>
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div>
-                <p className="text-lg mb-6">{site.contact.availability}</p>
+                <p className="mb-6">{site.contact.availability}</p>
 
                 <div className="grid gap-6 mb-8">
                   <div className="flex items-start gap-4">
