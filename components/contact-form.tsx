@@ -5,13 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 type Status = "idle" | "submitting" | "success" | "error"
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle")
-  const [projectType, setProjectType] = useState("")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -19,7 +17,6 @@ export function ContactForm() {
 
     const form = e.currentTarget
     const data = new FormData(form)
-    data.set("project-type", projectType)
 
     try {
       const res = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
@@ -31,7 +28,7 @@ export function ContactForm() {
       if (res.ok) {
         setStatus("success")
         form.reset()
-        setProjectType("")
+
       } else {
         setStatus("error")
       }
@@ -42,7 +39,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-muted p-6 rounded-lg flex flex-col items-center justify-center gap-4 text-center min-h-[300px]">
+      <div className="flex flex-col items-start gap-4 min-h-[300px] justify-center">
         <p className="text-2xl">✓</p>
         <h2 className="text-xl font-semibold">Mensaje enviado</h2>
         <p className="text-muted-foreground">Gracias por contactarme. Respondré dentro de las 48 horas.</p>
@@ -54,8 +51,8 @@ export function ContactForm() {
   }
 
   return (
-    <div className="bg-muted p-6 rounded-lg">
-      <h2 className="text-xl font-semibold mb-6">Dejame un mensaje</h2>
+    <div>
+      <h2 style={{ fontSize: "1rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 1.5rem", textAlign: "center" }}>Dejame un mensaje</h2>
       <form className="grid gap-6" onSubmit={handleSubmit}>
         <div className="grid gap-2">
           <Label htmlFor="name">Nombre</Label>
@@ -65,21 +62,7 @@ export function ContactForm() {
           <Label htmlFor="email">Email</Label>
           <Input id="email" name="email" type="email" placeholder="Tu dirección de email" required />
         </div>
-        <div className="grid gap-2">
-          <Label htmlFor="project-type">Tipo de Proyecto</Label>
-          <Select value={projectType} onValueChange={(v) => setProjectType(v ?? "")}>
-            <SelectTrigger id="project-type">
-              <SelectValue placeholder="Seleccioná el tipo de proyecto" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="Residencial">Residencial</SelectItem>
-              <SelectItem value="Comercial">Comercial</SelectItem>
-              <SelectItem value="Cultural">Cultural</SelectItem>
-              <SelectItem value="Espacios Públicos">Espacios Públicos</SelectItem>
-              <SelectItem value="Otro">Otro</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+
         <div className="grid gap-2">
           <Label htmlFor="message">Mensaje</Label>
           <Textarea
@@ -105,3 +88,4 @@ export function ContactForm() {
     </div>
   )
 }
+

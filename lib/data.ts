@@ -43,6 +43,8 @@ export interface SiteData {
     location: string
     locationNote?: string
     photo: string
+    availability?: string
+    instagram?: string
   }
   hero: {
     image: string

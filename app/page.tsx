@@ -1,12 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight, MapPin, Mail } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { MobileNav } from "@/components/mobile-nav"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { SiteFooter } from "@/components/site-footer"
+import { ContactForm } from "@/components/contact-form"
 import { readProjects, readSite, readDestacados } from "@/lib/data"
 
 export const dynamic = 'force-dynamic'
@@ -18,6 +19,7 @@ export default async function Home() {
     readSite(),
   ])
   const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
+  const instagramUrl = site.social.find((s) => s.label === 'Instagram')?.url ?? '#'
   return (
     <div className="flex min-h-screen flex-col">
 
@@ -51,12 +53,12 @@ export default async function Home() {
 
             <nav className="hidden md:flex" style={{ gap: "1.75rem" }}>
               <Link href="/projects" className="text-sm font-medium hover:underline underline-offset-4">
-                Proyectos
+                Portfolio
               </Link>
               <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
                 Sobre mí
               </Link>
-              <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4">
+              <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
                 Contacto
               </Link>
             </nav>
@@ -75,7 +77,7 @@ export default async function Home() {
         <section id="work" style={{ padding: "5rem 0 2.5rem" }}>
           <div className="container">
             <div style={{ marginBottom: "2.5rem" }}>
-              <h2 style={{ margin: 0, fontSize: "clamp(1.625rem, 2.5vw, 2rem)", fontWeight: 600, letterSpacing: "-0.02em" }}>
+              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
                 Proyectos destacados
               </h2>
             </div>
@@ -97,11 +99,11 @@ export default async function Home() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-lg">{project.title}</h3>
+                    <h3 style={{ fontSize: "1rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0 }}>{project.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{project.location}</p>
                     <div className="flex gap-2 mt-2">
-                      <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{project.category}</span>
-                      <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{project.year}</span>
+                      <span className="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold">{project.category}</span>
+                      <span className="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold">{project.year}</span>
                     </div>
                   </div>
                 </Link>
@@ -120,30 +122,31 @@ export default async function Home() {
         {/* SOBRE MÍ */}
         <section id="about" style={{ padding: "2.5rem 0" }}>
           <div className="container">
-            <div className="bg-muted border border-border rounded-[var(--radius)] px-7 py-10 md:px-10 md:py-12 lg:px-14 lg:py-16">
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] items-center gap-10 md:gap-14">
-                <div className="relative overflow-hidden aspect-[4/5] max-w-[280px] md:max-w-[320px]">
-                  <Image
-                    src={site.about.photo}
-                    alt={`${site.about.name}, ${site.about.role}`}
-                    fill
-                    className="object-cover"
-                  />
+            <div style={{ marginBottom: "2.5rem" }}>
+              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
+                Sobre mí
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-start gap-10 md:gap-14">
+              <div>
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <p style={{ fontWeight: 600, fontSize: "1.25rem", margin: "0 0 0.25rem" }}>{site.about.name}</p>
+                  <p className="text-muted-foreground" style={{ fontSize: "1rem", margin: "0 0 0.125rem" }}>{site.about.role}</p>
+                  <p className="text-muted-foreground" style={{ fontSize: "1rem", margin: 0 }}>{site.about.location}</p>
                 </div>
-                <div>
-                  <h2 style={{ fontSize: "clamp(1.625rem, 2.5vw, 2rem)", fontWeight: 600, letterSpacing: "-0.02em", margin: "0 0 1.25rem" }}>
-                    Sobre mí
-                  </h2>
-                  {site.about.bio.map((para, i) => (
-                    <p key={i} style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.875rem", textAlign: "justify", hyphens: "auto" }}>
-                      {para}
-                    </p>
-                  ))}
-                  <div className="inline-flex items-center text-muted-foreground" style={{ gap: 6, marginTop: "0.75rem", fontSize: "0.875rem" }}>
-                    <MapPin className="h-[14px] w-[14px]" />
-                    <span>{site.about.location}</span>
-                  </div>
-                </div>
+                {site.about.bio.map((para, i) => (
+                  <p key={i} style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.875rem", textAlign: "justify", hyphens: "auto" }}>
+                    {para}
+                  </p>
+                ))}
+              </div>
+              <div className="relative overflow-hidden aspect-[4/5]">
+                <Image
+                  src={site.about.photo}
+                  alt={`${site.about.name}, ${site.about.role}`}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -152,14 +155,73 @@ export default async function Home() {
         {/* CONTACTO */}
         <section id="contact" style={{ padding: "2.5rem 0" }}>
           <div className="container">
-            <div className="mx-auto text-center" style={{ maxWidth: 640 }}>
-              <h2 style={{ fontSize: "clamp(1.625rem, 2.5vw, 2rem)", fontWeight: 600, letterSpacing: "-0.02em", margin: "0 0 1.75rem" }}>
-                Trabajemos juntos
+            <div style={{ marginBottom: "2.5rem" }}>
+              <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center" }}>
+                Contactame
               </h2>
-              <Link href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}>
-                Contactame para hablar sobre tu proyecto
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+              <div>
+                <p className="text-lg mb-6">{site.contact.availability}</p>
+
+                <div className="grid gap-6 mb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-muted rounded-full p-2.5">
+                      <Mail className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Email</h3>
+                      <p className="text-muted-foreground">{site.contact.email}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="bg-muted rounded-full p-2.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-medium">WhatsApp</h3>
+                      <a
+                        href={`https://wa.me/${site.contact.phone.replace(/[^0-9]/g, '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:underline"
+                      >
+                        {site.contact.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="bg-muted rounded-full p-2.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Instagram</h3>
+                      <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:underline underline-offset-4">
+                        @{site.contact.instagram}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="bg-muted rounded-full p-2.5">
+                      <MapPin className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Ubicación</h3>
+                      <p className="text-muted-foreground">{site.contact.location}</p>
+                      <p className="text-muted-foreground">{site.contact.locationNote}</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <ContactForm />
             </div>
           </div>
         </section>

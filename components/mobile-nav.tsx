@@ -5,9 +5,9 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const links = [
-  { href: "/projects", label: "Proyectos" },
+  { href: "/projects", label: "Portfolio" },
   { href: "/#about", label: "Sobre mí" },
-  { href: "/contact", label: "Contacto" },
+  { href: "/#contact", label: "Contacto" },
 ]
 
 export function MobileNav() {

@@ -38,12 +38,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         <div className="container py-12">
           <Link href="/projects" className={cn(buttonVariants({ variant: "ghost" }), "mb-6 -ml-4")}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver a Proyectos
+            Ir al Portfolio
           </Link>
 
           <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
             <div>
-              <h1 className="text-3xl font-bold tracking-tight mb-2">{project.title}</h1>
+              <h1 style={{ fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 0.5rem" }}>{project.title}</h1>
               <div className="flex flex-wrap gap-4 mb-6 text-muted-foreground">
                 <div className="flex items-center">
                   <MapPin className="mr-1 h-4 w-4" />

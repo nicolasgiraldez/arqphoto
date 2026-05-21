@@ -86,6 +86,12 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  [id] {
+    scroll-margin-top: 88px;
+  }
   * {
     border-color: hsl(var(--border));
   }

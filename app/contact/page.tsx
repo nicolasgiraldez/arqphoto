@@ -17,7 +17,7 @@ export default function ContactPage() {
         <div className="container py-12">
           <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "mb-6 -ml-4")}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver al Inicio
+            Ir al Inicio
           </Link>
 
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
