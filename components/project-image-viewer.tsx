@@ -18,7 +18,7 @@ export function ProjectImageViewer({ mainImage, images, alt, portrait, descripti
   return (
     <>
       <div
-        className="aspect-[16/9] relative overflow-hidden mb-8 cursor-pointer"
+        className="aspect-[3/2] relative overflow-hidden mb-8 cursor-pointer"
         onClick={() => galleryRef.current?.open(0)}
       >
         <Image

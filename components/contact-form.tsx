@@ -68,7 +68,7 @@ export function ContactForm() {
           <Textarea
             id="message"
             name="message"
-            placeholder="Contame sobre tu proyecto, plazos y cualquier requisito específico."
+            placeholder="Tipo de proyecto, ubicación, plazos y cualquier detalle relevante."
             rows={6}
             required
           />
@@ -79,10 +79,10 @@ export function ContactForm() {
           </p>
         )}
         <Button type="submit" size="lg" disabled={status === "submitting"}>
-          {status === "submitting" ? "Enviando…" : "Enviar Mensaje"}
+          {status === "submitting" ? "Enviando…" : "Enviar"}
         </Button>
         <p className="text-xs text-muted-foreground text-center">
-          Responderé a tu consulta dentro de las 48 horas.
+          Responderé a tu consulta a la brevedad.
         </p>
       </form>
     </div>
