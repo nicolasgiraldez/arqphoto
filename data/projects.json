@@ -6,35 +6,35 @@
     "year": "2023",
     "client": "TUCO.arq",
     "description": "Reportaje fotográfico de una reforma integral con cocina-isla como protagonista, living-comedor, dormitorio principal, dos cuartos infantiles, toilette y baño. La sesión registra la atmósfera del proyecto a través de la luz natural, los revestimientos y los detalles en madera y cobre.",
-    "mainImage": "/images/bonifacio-cocina-hornos.jpg",
+    "mainImage": "/images/bonifacio/bonifacio-cocina-hornos.jpg",
     "images": [
-      "/images/bonifacio-cocina-mesada.jpg",
-      "/images/bonifacio-cocina-vertical.jpg",
-      "/images/bonifacio-cocina-detalle.jpg",
-      "/images/bonifacio-cocina-tazas.jpg",
-      "/images/bonifacio-cocina-anafe.jpg",
-      "/images/bonifacio-cocina-bacha.jpg",
-      "/images/bonifacio-cocina-isla.jpg",
-      "/images/bonifacio-cocina-barra.jpg",
-      "/images/bonifacio-cocina-banquetas.jpg",
-      "/images/bonifacio-cocina-panoramica.jpg",
-      "/images/bonifacio-lavadero.jpg",
-      "/images/bonifacio-living.jpg",
-      "/images/bonifacio-comedor-cuadro.jpg",
-      "/images/bonifacio-comedor-mesa.jpg",
-      "/images/bonifacio-cuarto-mesa.jpg",
-      "/images/bonifacio-cuarto-puerta.jpg",
-      "/images/bonifacio-cuarto-cocinita.jpg",
-      "/images/bonifacio-cuarto-conejos.jpg",
-      "/images/bonifacio-cuarto-juguetes.jpg",
-      "/images/bonifacio-dormitorio-respaldo.jpg",
-      "/images/bonifacio-dormitorio-principal.jpg",
-      "/images/bonifacio-vestidor.jpg",
-      "/images/bonifacio-toilette-negro.jpg",
-      "/images/bonifacio-bano-colorido.jpg",
-      "/images/bonifacio-bano-detalle.jpg",
-      "/images/bonifacio-bano-lavatorio.jpg",
-      "/images/bonifacio-bano-vertical.jpg"
+      "/images/bonifacio/bonifacio-cocina-mesada.jpg",
+      "/images/bonifacio/bonifacio-cocina-vertical.jpg",
+      "/images/bonifacio/bonifacio-cocina-detalle.jpg",
+      "/images/bonifacio/bonifacio-cocina-tazas.jpg",
+      "/images/bonifacio/bonifacio-cocina-anafe.jpg",
+      "/images/bonifacio/bonifacio-cocina-bacha.jpg",
+      "/images/bonifacio/bonifacio-cocina-isla.jpg",
+      "/images/bonifacio/bonifacio-cocina-barra.jpg",
+      "/images/bonifacio/bonifacio-cocina-banquetas.jpg",
+      "/images/bonifacio/bonifacio-cocina-panoramica.jpg",
+      "/images/bonifacio/bonifacio-lavadero.jpg",
+      "/images/bonifacio/bonifacio-living.jpg",
+      "/images/bonifacio/bonifacio-comedor-cuadro.jpg",
+      "/images/bonifacio/bonifacio-comedor-mesa.jpg",
+      "/images/bonifacio/bonifacio-cuarto-mesa.jpg",
+      "/images/bonifacio/bonifacio-cuarto-puerta.jpg",
+      "/images/bonifacio/bonifacio-cuarto-cocinita.jpg",
+      "/images/bonifacio/bonifacio-cuarto-conejos.jpg",
+      "/images/bonifacio/bonifacio-cuarto-juguetes.jpg",
+      "/images/bonifacio/bonifacio-dormitorio-respaldo.jpg",
+      "/images/bonifacio/bonifacio-dormitorio-principal.jpg",
+      "/images/bonifacio/bonifacio-vestidor.jpg",
+      "/images/bonifacio/bonifacio-toilette-negro.jpg",
+      "/images/bonifacio/bonifacio-bano-colorido.jpg",
+      "/images/bonifacio/bonifacio-bano-detalle.jpg",
+      "/images/bonifacio/bonifacio-bano-lavatorio.jpg",
+      "/images/bonifacio/bonifacio-bano-vertical.jpg"
     ],
     "related": [
       "2",
@@ -46,7 +46,7 @@
       "Documentación de proyecto completo"
     ],
     "portrait": false,
-    "carouselImage": "/images/bonifacio-cocina-general.jpg",
+    "carouselImage": "/images/bonifacio/bonifacio-cocina-general.jpg",
     "id": "1"
   },
   {
@@ -56,15 +56,15 @@
     "year": "2023",
     "client": "TUCO.arq",
     "description": "Este proyecto muestra la renovación integral de una casa en el barrio de Flores. La intervención destaca por el uso de murales botánicos de gran formato que aportan personalidad y color a los espacios, combinados con elementos de diseño contemporáneo como carpintería acanalada, pisos geométricos y modernos placards. El contraste entre los tonos neutros de la base arquitectónica y los acentos coloridos de los murales y accesorios crea un ambiente vibrante y acogedor.",
-    "mainImage": "/images/quirno-9.jpeg",
+    "mainImage": "/images/quirno/quirno-9.jpeg",
     "images": [
-      "/images/quirno-2.jpeg",
-      "/images/quirno-3.jpeg",
-      "/images/quirno-4.jpeg",
-      "/images/quirno-5.jpeg",
-      "/images/quirno-6.jpeg",
-      "/images/quirno-7.jpeg",
-      "/images/quirno-8.jpeg"
+      "/images/quirno/quirno-2.jpeg",
+      "/images/quirno/quirno-3.jpeg",
+      "/images/quirno/quirno-4.jpeg",
+      "/images/quirno/quirno-5.jpeg",
+      "/images/quirno/quirno-6.jpeg",
+      "/images/quirno/quirno-7.jpeg",
+      "/images/quirno/quirno-8.jpeg"
     ],
     "related": [
       "1",
@@ -77,28 +77,38 @@
       "Fotografía de mobiliario a medida"
     ],
     "portrait": false,
-    "carouselImage": "/images/quirno-5.jpeg",
+    "carouselImage": "/images/quirno/quirno-5.jpeg",
     "id": "4"
   },
   {
-    "id": "2",
     "title": "Arenales",
     "location": "Recoleta, Buenos Aires",
     "category": "Residencial",
     "year": "2022",
     "client": "TUCO.arq",
-    "architect": "Arq. Maite Goicochea",
     "description": "Proyecto Arenales consiste en una reforma integral de cocina y baño en un departamento ubicado en Recoleta. El diseño contemporáneo fusiona funcionalidad y estética, donde cada detalle ha sido cuidadosamente considerado para crear espacios armoniosos y elegantes.",
-    "mainImage": "/images/cocina-minimalista.png",
+    "mainImage": "/images/arenales/arenales-bano-doble-lavatorio.jpg",
     "images": [
-      "/images/cocina-detalle.png",
-      "/images/cocina-vista-completa.png",
-      "/images/cocina-fregadero.png",
-      "/images/refrigerador.png",
-      "/images/vinoteca.png",
-      "/images/bano-principal.png",
-      "/images/bano-doble-lavabo.png",
-      "/images/bano-ducha.png"
+      "/images/arenales/arenales-bano-espejos.jpg",
+      "/images/arenales/arenales-bano-lavatorio-frontal.jpg",
+      "/images/arenales/arenales-bano-banera.jpg",
+      "/images/arenales/arenales-bano-bidet.jpg",
+      "/images/arenales/arenales-comedor-redondo.jpg",
+      "/images/arenales/arenales-cocina-mesada-lateral.jpg",
+      "/images/arenales/arenales-cocina-vista-lineal.jpg",
+      "/images/arenales/arenales-cocina-cafetera.jpg",
+      "/images/arenales/arenales-cocina-anafe.jpg",
+      "/images/arenales/arenales-cocina-heladera-bacha.jpg",
+      "/images/arenales/arenales-cocina-heladera.jpg",
+      "/images/arenales/arenales-cocina-pasillo.jpg",
+      "/images/arenales/arenales-cocina-bacha.jpg",
+      "/images/arenales/arenales-cocina-bacha-ventana.jpg",
+      "/images/arenales/arenales-cocina-vista-desde-heladera.jpg",
+      "/images/arenales/arenales-cocina-placard.jpg",
+      "/images/arenales/arenales-mueble-madera-detalle.jpg",
+      "/images/arenales/arenales-cajon-utensilios.jpg",
+      "/images/arenales/arenales-vinoteca-extraible.jpg",
+      "/images/arenales/arenales-vinoteca-vertical.jpg"
     ],
     "related": [
       "1",
@@ -108,7 +118,11 @@
       "Fotografía de interiores",
       "Fotografía de detalles arquitectónicos",
       "Documentación de proyecto completo"
-    ]
+    ],
+    "portrait": false,
+    "architect": "Arq. Maite Goicochea",
+    "carouselImage": "/images/arenales/arenales-cocina-bacha-ventana.jpg",
+    "id": "2"
   },
   {
     "id": "3",
@@ -118,14 +132,14 @@
     "year": "2022",
     "client": "Proyecto Personal",
     "description": "Esta serie fotográfica fue trabajada durante un Taller de Fotografía de Arquitectura en el Centro Cultural San Martín en 2022. El proyecto documenta casas históricas que han resistido el paso del tiempo y la modernización urbana, quedando 'atrapadas' entre edificios contemporáneos de mayor altura. Estas imágenes capturan el contraste entre lo antiguo y lo nuevo, la resistencia de la arquitectura patrimonial frente al avance inmobiliario, y la peculiar estética urbana que surge de esta yuxtaposición de estilos y épocas en el paisaje de Buenos Aires.",
-    "mainImage": "/images/casas-atrapadas-6.jpeg",
+    "mainImage": "/images/casas-atrapadas/casas-atrapadas-6.jpeg",
     "images": [
-      "/images/casas-atrapadas-1.jpeg",
-      "/images/casas-atrapadas-2.jpeg",
-      "/images/casas-atrapadas-3.jpeg",
-      "/images/casas-atrapadas-4.jpeg",
-      "/images/casas-atrapadas-5.jpeg",
-      "/images/casas-atrapadas-7.jpeg"
+      "/images/casas-atrapadas/casas-atrapadas-1.jpeg",
+      "/images/casas-atrapadas/casas-atrapadas-2.jpeg",
+      "/images/casas-atrapadas/casas-atrapadas-3.jpeg",
+      "/images/casas-atrapadas/casas-atrapadas-4.jpeg",
+      "/images/casas-atrapadas/casas-atrapadas-5.jpeg",
+      "/images/casas-atrapadas/casas-atrapadas-7.jpeg"
     ],
     "portrait": true,
     "crop": "bottom",
@@ -145,10 +159,10 @@
     "year": "2024",
     "client": "Estudio Interior BA",
     "description": "Reportaje fotográfico de una reforma residencial en un pasaje de Palermo, con foco en la relación entre living, cocina y baño. La serie registra la luz natural, la calidez de las carpinterías de madera, las superficies minerales y los detalles de terminación pensados para comunicar el carácter habitable del proyecto.",
-    "mainImage": "/images/palermo-pasaje-living.png",
+    "mainImage": "/images/pasaje-palermo/palermo-pasaje-living.png",
     "images": [
-      "/images/palermo-pasaje-cocina.png",
-      "/images/palermo-pasaje-bano.png"
+      "/images/pasaje-palermo/palermo-pasaje-cocina.png",
+      "/images/pasaje-palermo/palermo-pasaje-bano.png"
     ],
     "related": [
       "1",
@@ -170,10 +184,10 @@
     "year": "2024",
     "client": "Distrito Hoteles",
     "description": "Producción fotográfica para un hotel boutique en un edificio histórico recuperado. Las imágenes combinan vistas generales y escenas de detalle para documentar lobby, suite y terraza, con una mirada orientada a arquitectura, hospitalidad y comunicación comercial.",
-    "mainImage": "/images/hotel-san-telmo-lobby.png",
+    "mainImage": "/images/hotel-san-telmo/hotel-san-telmo-lobby.png",
     "images": [
-      "/images/hotel-san-telmo-suite.png",
-      "/images/hotel-san-telmo-terraza.png"
+      "/images/hotel-san-telmo/hotel-san-telmo-suite.png",
+      "/images/hotel-san-telmo/hotel-san-telmo-terraza.png"
     ],
     "related": [
       "3",
@@ -186,7 +200,7 @@
       "Documentación de proyecto completo"
     ],
     "portrait": false,
-    "carouselImage": "/images/hotel-san-telmo-terraza.png",
+    "carouselImage": "/images/hotel-san-telmo/hotel-san-telmo-terraza.png",
     "id": "6"
   },
   {
@@ -196,10 +210,10 @@
     "year": "2024",
     "client": "Nodo Workplace",
     "description": "Registro de oficinas corporativas con espacios flexibles, salas de reunión y áreas de descanso. La cobertura prioriza la lectura espacial, el diseño de mobiliario, los materiales acústicos y la atmósfera de trabajo para piezas institucionales y de portfolio.",
-    "mainImage": "/images/oficinas-puerto-madero-workspace.png",
+    "mainImage": "/images/oficinas-puerto-madero/oficinas-puerto-madero-workspace.png",
     "images": [
-      "/images/oficinas-puerto-madero-sala.png",
-      "/images/oficinas-puerto-madero-lounge.png"
+      "/images/oficinas-puerto-madero/oficinas-puerto-madero-sala.png",
+      "/images/oficinas-puerto-madero/oficinas-puerto-madero-lounge.png"
     ],
     "related": [
       "6",
@@ -220,10 +234,10 @@
     "year": "2025",
     "client": "Espacio Público BA",
     "description": "Cobertura fotográfica de una biblioteca pública contemporánea, articulada entre sala de lectura, patio exterior y detalles de circulación. La serie pone en valor la escala cívica, el uso de hormigón y madera, y la manera en que la luz natural ordena la experiencia del edificio.",
-    "mainImage": "/images/biblioteca-parque-patricios-sala.png",
+    "mainImage": "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-sala.png",
     "images": [
-      "/images/biblioteca-parque-patricios-patio.png",
-      "/images/biblioteca-parque-patricios-escalera.png"
+      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-patio.png",
+      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-escalera.png"
     ],
     "related": [
       "3",
@@ -236,7 +250,7 @@
       "Narrativa visual arquitectónica"
     ],
     "portrait": false,
-    "carouselImage": "/images/biblioteca-parque-patricios-patio.png",
+    "carouselImage": "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-patio.png",
     "id": "8"
   },
   {
@@ -246,10 +260,10 @@
     "year": "2025",
     "client": "Habitar Norte",
     "description": "Documentación de un conjunto residencial de baja escala con espacios comunes, terrazas y paisaje nativo. La producción combina fotografía exterior, vista aérea de implantación y registro de amenities para mostrar la relación entre arquitectura, entorno y vida comunitaria.",
-    "mainImage": "/images/viviendas-escobar-exterior.png",
+    "mainImage": "/images/viviendas-escobar/viviendas-escobar-exterior.png",
     "images": [
-      "/images/viviendas-escobar-aerea.png",
-      "/images/viviendas-escobar-amenity.png"
+      "/images/viviendas-escobar/viviendas-escobar-aerea.png",
+      "/images/viviendas-escobar/viviendas-escobar-amenity.png"
     ],
     "related": [
       "5",
@@ -262,7 +276,7 @@
       "Fotografía para real estate y marketing"
     ],
     "portrait": false,
-    "carouselImage": "/images/viviendas-escobar-aerea.png",
+    "carouselImage": "/images/viviendas-escobar/viviendas-escobar-aerea.png",
     "id": "9"
   }
 ]

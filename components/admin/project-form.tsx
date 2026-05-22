@@ -10,6 +10,22 @@ import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { ServicesEditor } from '@/components/admin/services-editor'
 import type { Project } from '@/lib/data'
+import {
+  DndContext,
+  closestCenter,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragOverlay,
+  type DragEndEvent,
+} from '@dnd-kit/core'
+import {
+  SortableContext,
+  rectSortingStrategy,
+  useSortable,
+  arrayMove,
+} from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
 
 const CATEGORIES = ['Residencial', 'Comercial', 'Cultural', 'Urbano', 'Espacios Públicos']
 const CROP_OPTIONS = [
@@ -104,6 +120,39 @@ function InlineImagePicker({ value, onSelect, label }: { value: string; onSelect
   )
 }
 
+// ── Sortable gallery ──────────────────────────────────────────────────────────
+
+function SortableImage({ url, onRemove }: { url: string; onRemove: () => void }) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
+    useSortable({ id: url })
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0 : 1,
+  }
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      className="relative group w-20 h-20 rounded-md overflow-hidden border bg-muted cursor-grab active:cursor-grabbing touch-none"
+      {...attributes}
+      {...listeners}
+    >
+      <Image src={url} alt="" fill className="object-cover" unoptimized draggable={false} />
+      <button
+        type="button"
+        onPointerDown={e => e.stopPropagation()}
+        onClick={onRemove}
+        className="absolute top-1 right-1 w-5 h-5 rounded-full bg-black/70 text-white text-xs leading-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black cursor-pointer"
+      >
+        ×
+      </button>
+    </div>
+  )
+}
+
 // ── Main form ─────────────────────────────────────────────────────────────────
 
 interface Props {
@@ -117,6 +166,9 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [galleryOpen, setGalleryOpen] = useState(false)
+
+  const [activeImageUrl, setActiveImageUrl] = useState<string | null>(null)
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 5 } }))
 
   const [form, setForm] = useState({
     title: initialData?.title ?? '',
@@ -273,27 +325,42 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground border-b pb-2">
           Galería de imágenes
         </h2>
-        <div className="flex flex-wrap gap-2">
-          {form.images.map(url => (
-            <div key={url} className="relative group w-20 h-20 rounded-md overflow-hidden border bg-muted">
-              <Image src={url} alt="" fill className="object-cover" unoptimized />
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          onDragStart={(event) => setActiveImageUrl(event.active.id as string)}
+          onDragEnd={(event: DragEndEvent) => {
+            setActiveImageUrl(null)
+            const { active, over } = event
+            if (!over || active.id === over.id) return
+            const oldIndex = form.images.indexOf(active.id as string)
+            const newIndex = form.images.indexOf(over.id as string)
+            set('images', arrayMove(form.images, oldIndex, newIndex))
+          }}
+          onDragCancel={() => setActiveImageUrl(null)}
+        >
+          <SortableContext items={form.images} strategy={rectSortingStrategy}>
+            <div className="flex flex-wrap gap-2">
+              {form.images.map(url => (
+                <SortableImage key={url} url={url} onRemove={() => removeGalleryImage(url)} />
+              ))}
               <button
                 type="button"
-                onClick={() => removeGalleryImage(url)}
-                className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 text-white text-xl transition-opacity"
+                onClick={() => setGalleryOpen(true)}
+                className="w-20 h-20 rounded-md border-2 border-dashed flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-colors text-2xl"
               >
-                ×
+                +
               </button>
             </div>
-          ))}
-          <button
-            type="button"
-            onClick={() => setGalleryOpen(true)}
-            className="w-20 h-20 rounded-md border-2 border-dashed flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-colors text-2xl"
-          >
-            +
-          </button>
-        </div>
+          </SortableContext>
+          <DragOverlay>
+            {activeImageUrl && (
+              <div className="relative w-20 h-20 rounded-md overflow-hidden border bg-muted shadow-xl opacity-90">
+                <Image src={activeImageUrl} alt="" fill className="object-cover" unoptimized draggable={false} />
+              </div>
+            )}
+          </DragOverlay>
+        </DndContext>
         {galleryOpen && (
           <ImageModal
             onSelect={url => { addGalleryImage(url); setGalleryOpen(false) }}

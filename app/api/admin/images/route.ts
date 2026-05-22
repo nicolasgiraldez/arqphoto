@@ -19,7 +19,8 @@ export async function POST(request: Request) {
   if (!file) return NextResponse.json({ error: 'No se recibió archivo' }, { status: 400 })
 
   try {
-    const info = await saveImage(file)
+    const folder = formData.get('folder') as string | null
+    const info = await saveImage(file, folder || undefined)
     return NextResponse.json(info, { status: 201 })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Error al guardar'

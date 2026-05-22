@@ -1,4 +1,4 @@
-import { readFile, writeFile, readdir, unlink } from 'fs/promises'
+import { readFile, writeFile, readdir, unlink, mkdir } from 'fs/promises'
 import path from 'path'
 
 const DATA_DIR = path.join(process.cwd(), 'data')
@@ -94,16 +94,30 @@ export function generateNextId(projects: Project[]): string {
 export interface ImageInfo {
   filename: string
   url: string
+  folder?: string
 }
 
 export async function listImages(): Promise<ImageInfo[]> {
-  const files = await readdir(IMAGES_DIR)
-  return files
-    .filter(f => /\.(jpe?g|png|gif|webp|avif|svg)$/i.test(f))
-    .map(f => ({ filename: f, url: `/images/${f}` }))
+  const result: ImageInfo[] = []
+  async function scan(dir: string, folder?: string) {
+    const entries = await readdir(dir, { withFileTypes: true })
+    for (const e of entries) {
+      if (e.isDirectory()) {
+        await scan(path.join(dir, e.name), e.name)
+      } else if (/\.(jpe?g|png|gif|webp|avif|svg)$/i.test(e.name)) {
+        result.push({
+          filename: e.name,
+          url: folder ? `/images/${folder}/${e.name}` : `/images/${e.name}`,
+          folder,
+        })
+      }
+    }
+  }
+  await scan(IMAGES_DIR)
+  return result
 }
 
-export async function saveImage(file: File): Promise<ImageInfo> {
+export async function saveImage(file: File, folder?: string): Promise<ImageInfo> {
   if (!file.type.startsWith('image/')) throw new Error('Archivo no es una imagen')
   if (file.size > 10 * 1024 * 1024) throw new Error('Imagen supera 10MB')
 
@@ -115,13 +129,21 @@ export async function saveImage(file: File): Promise<ImageInfo> {
 
   if (!sanitized || sanitized.includes('/')) throw new Error('Nombre de archivo inválido')
 
+  const safeFolder = folder?.replace(/[^a-z0-9\-_]/g, '') || undefined
+  const dir = safeFolder ? path.join(IMAGES_DIR, safeFolder) : IMAGES_DIR
+  await mkdir(dir, { recursive: true })
+
   const buffer = Buffer.from(await file.arrayBuffer())
-  const dest = path.join(IMAGES_DIR, sanitized)
-  await writeFile(dest, buffer)
-  return { filename: sanitized, url: `/images/${sanitized}` }
+  await writeFile(path.join(dir, sanitized), buffer)
+
+  const url = safeFolder ? `/images/${safeFolder}/${sanitized}` : `/images/${sanitized}`
+  return { filename: sanitized, url, folder: safeFolder }
 }
 
-export async function deleteImage(filename: string): Promise<void> {
-  if (filename.includes('/') || filename.includes('..')) throw new Error('Nombre inválido')
-  await unlink(path.join(IMAGES_DIR, filename))
+export async function deleteImage(filePath: string): Promise<void> {
+  const normalized = path.normalize(filePath).replace(/\\/g, '/')
+  if (normalized.includes('..') || normalized.startsWith('/')) throw new Error('Nombre inválido')
+  const dest = path.join(IMAGES_DIR, normalized)
+  if (!dest.startsWith(IMAGES_DIR + path.sep)) throw new Error('Nombre inválido')
+  await unlink(dest)
 }
