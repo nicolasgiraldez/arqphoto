@@ -109,32 +109,35 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                   ))}
                 </ul>
 
-                <Separator className="my-6" />
-
-                <h2 className="text-xl font-semibold mb-4">Proyectos relacionados</h2>
-                <div className="grid gap-4">
-                  {relatedProjects.map((related) => (
-                    <Link
-                      key={related.id}
-                      href={`/projects/${related.id}`}
-                      className="group grid grid-cols-[80px_1fr] gap-3 items-center"
-                    >
-                      <div className="aspect-square relative overflow-hidden">
-                        <Image
-                          src={related.mainImage || "/placeholder.svg?height=400&width=400"}
-                          alt={related.title}
-                          fill
-                          sizes="80px"
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-medium group-hover:underline">{related.title}</h3>
-                        <p className="text-xs text-muted-foreground">{related.location}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                {relatedProjects.length > 0 && (
+                  <>
+                    <Separator className="my-6" />
+                    <h2 className="text-xl font-semibold mb-4">Proyectos relacionados</h2>
+                    <div className="grid gap-4">
+                      {relatedProjects.map((related) => (
+                        <Link
+                          key={related.id}
+                          href={`/projects/${related.id}`}
+                          className="group grid grid-cols-[80px_1fr] gap-3 items-center"
+                        >
+                          <div className="aspect-square relative overflow-hidden">
+                            <Image
+                              src={related.mainImage || "/placeholder.svg?height=400&width=400"}
+                              alt={related.title}
+                              fill
+                              sizes="80px"
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                          </div>
+                          <div>
+                            <h3 className="font-medium group-hover:underline">{related.title}</h3>
+                            <p className="text-xs text-muted-foreground">{related.location}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
