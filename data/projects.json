@@ -180,7 +180,9 @@
     "mainImage": "/images/pasaje-palermo/palermo-pasaje-living.png",
     "images": [
       "/images/pasaje-palermo/palermo-pasaje-cocina.png",
-      "/images/pasaje-palermo/palermo-pasaje-bano.png"
+      "/images/pasaje-palermo/palermo-pasaje-bano.png",
+      "/images/pasaje-palermo/palermo-pasaje-living-pasillo.png",
+      "/images/pasaje-palermo/palermo-pasaje-bano-vanitory.png"
     ],
     "related": [
       "1",
@@ -205,7 +207,9 @@
     "mainImage": "/images/hotel-san-telmo/hotel-san-telmo-lobby.png",
     "images": [
       "/images/hotel-san-telmo/hotel-san-telmo-suite.png",
-      "/images/hotel-san-telmo/hotel-san-telmo-terraza.png"
+      "/images/hotel-san-telmo/hotel-san-telmo-terraza.png",
+      "/images/hotel-san-telmo/hotel-san-telmo-desayunador.png",
+      "/images/hotel-san-telmo/hotel-san-telmo-pasillo.png"
     ],
     "related": [
       "3",
@@ -231,7 +235,9 @@
     "mainImage": "/images/oficinas-puerto-madero/oficinas-puerto-madero-workspace.png",
     "images": [
       "/images/oficinas-puerto-madero/oficinas-puerto-madero-sala.png",
-      "/images/oficinas-puerto-madero/oficinas-puerto-madero-lounge.png"
+      "/images/oficinas-puerto-madero/oficinas-puerto-madero-lounge.png",
+      "/images/oficinas-puerto-madero/oficinas-puerto-madero-area-flexible.png",
+      "/images/oficinas-puerto-madero/oficinas-puerto-madero-sala-reunion.png"
     ],
     "related": [
       "6",
@@ -255,7 +261,9 @@
     "mainImage": "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-sala.png",
     "images": [
       "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-patio.png",
-      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-escalera.png"
+      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-escalera.png",
+      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-lectura.png",
+      "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-patio-lectura.png"
     ],
     "related": [
       "3",
@@ -281,7 +289,9 @@
     "mainImage": "/images/viviendas-escobar/viviendas-escobar-exterior.png",
     "images": [
       "/images/viviendas-escobar/viviendas-escobar-aerea.png",
-      "/images/viviendas-escobar/viviendas-escobar-amenity.png"
+      "/images/viviendas-escobar/viviendas-escobar-amenity.png",
+      "/images/viviendas-escobar/viviendas-escobar-jardin-comun.png",
+      "/images/viviendas-escobar/viviendas-escobar-pabellon-amenity.png"
     ],
     "related": [
       "5",
