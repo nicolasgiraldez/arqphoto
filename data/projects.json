@@ -5,7 +5,7 @@
     "category": "Residencial",
     "year": "2023",
     "client": "TUCO.arq",
-    "description": "Reportaje fotográfico de una reforma integral con cocina-isla como protagonista, living-comedor, dormitorio principal, dos cuartos infantiles, toilette y baño. La sesión registra la atmósfera del proyecto a través de la luz natural, los revestimientos y los detalles en madera y cobre.",
+    "description": "Producción fotográfica pensada para narrar una reforma completa desde sus usos reales: cocina abierta, comedor, living, dormitorios infantiles, suite, vestidor y baños. El registro prioriza la lectura espacial, la entrada de luz y la materialidad, alternando encuadres generales, rincones habitados y detalles de mobiliario y revestimientos. De esta manera la fotografía comunica tanto la resolución arquitectónica como la atmósfera cálida y cotidiana que sostiene la identidad del proyecto.",
     "mainImage": "/images/bonifacio/bonifacio-cocina-hornos.jpg",
     "images": [
       "/images/bonifacio/bonifacio-cocina-mesada.jpg",
@@ -55,8 +55,8 @@
     "category": "Residencial",
     "year": "2023",
     "client": "TUCO.arq",
-    "description": "Este proyecto muestra la renovación integral de una casa en el barrio de Flores. La intervención destaca por el uso de murales botánicos de gran formato que aportan personalidad y color a los espacios, combinados con elementos de diseño contemporáneo como carpintería acanalada, pisos geométricos y modernos placards. El contraste entre los tonos neutros de la base arquitectónica y los acentos coloridos de los murales y accesorios crea un ambiente vibrante y acogedor.",
-    "mainImage": "/images/quirno/quirno-recibidor-mueble-mural.jpg",
+    "description": "Producción fotográfica para registrar una vivienda renovada donde cada ambiente incorpora una pieza gráfica o material distintiva. Desde el recibidor con mural floral hasta el baño, el dormitorio y el vestidor, las imágenes buscan ordenar el relato del proyecto, equilibrando vistas generales, detalles de carpintería y momentos de color que vuelven memorable la intervención y amplían su potencia comunicacional.",
+    "mainImage": "/images/quirno/quirno-recibidor-pasillo.jpg",
     "images": [
       "/images/quirno/quirno-puerta-oval.jpg",
       "/images/quirno/quirno-mueble-madera-detalle.jpg",
@@ -96,7 +96,7 @@
       "Fotografía de mobiliario a medida"
     ],
     "portrait": false,
-    "carouselImage": "/images/quirno/quirno-recibidor-mueble.jpg",
+    "carouselImage": "/images/quirno/quirno-recibidor-mueble-mural.jpg",
     "id": "4"
   },
   {
@@ -105,7 +105,7 @@
     "category": "Residencial",
     "year": "2022",
     "client": "TUCO.arq",
-    "description": "Proyecto Arenales consiste en una reforma integral de cocina y baño en un departamento ubicado en Recoleta. El diseño contemporáneo fusiona funcionalidad y estética, donde cada detalle ha sido cuidadosamente considerado para crear espacios armoniosos y elegantes.",
+    "description": "Sesión de interiores para una renovación compacta y contemporánea, donde la fotografía enfatiza orden, luz y terminaciones. El registro muestra la cocina lineal desde distintos puntos, su mobiliario, sistemas de guardado y accesorios, junto con el baño renovado donde se destaca la armonía entre materialidad e iluminación. El resultado es una galería de imágenes que comunica la funcionalidad, la escala doméstica y el cuidado técnico del proyecto.",
     "mainImage": "/images/arenales/arenales-bano-doble-lavatorio.jpg",
     "images": [
       "/images/arenales/arenales-bano-espejos.jpg",
@@ -139,8 +139,7 @@
       "Documentación de proyecto completo"
     ],
     "portrait": false,
-    "architect": "Arq. Maite Goicochea",
-    "carouselImage": "/images/arenales/arenales-cocina-bacha-ventana.jpg",
+    "carouselImage": "/images/arenales/arenales-cocina-vista-lineal.jpg",
     "id": "2"
   },
   {
