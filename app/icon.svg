@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200">
+  <rect width="220" height="200" fill="#0f172a"/>
+  <path d="M 147.4 0 A 195 195 0 0 1 147.4 200" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="butt"/>
+  <path d="M 0 67.7 A 38 38 0 0 1 0 132.3" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="butt"/>
+  <line x1="188" y1="100" x2="220" y2="100" stroke="#ffffff" stroke-width="16" stroke-linecap="butt"/>
+  <text x="92.5" y="124" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="86" letter-spacing="-2" fill="#ffffff">Ng</text>
+</svg>
