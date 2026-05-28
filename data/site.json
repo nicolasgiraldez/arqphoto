@@ -1,5 +1,5 @@
 {
-  "maintenanceMode": true,
+  "maintenanceMode": false,
   "about": {
     "name": "Nico Giraldez",
     "role": "Fotógrafo de Arquitectura y Diseño",
@@ -20,12 +20,6 @@
     "locationNote": "",
     "photo": "/images/site/fotografo-locacion.jpeg",
     "availability": "Si estás desarrollando, vendiendo o comunicando un espacio, puedo ayudarte a construir una mirada clara y cuidada de tu proyecto. Escribime y conversemos."
-  },
-  "hero": {
-    "image": "/images/site/buenos-aires.jpg",
-    "alt": "Buenos Aires en altura",
-    "title": "Fotografía de Arquitectura",
-    "subtitle": "Buenos Aires, Argentina"
   },
   "copyright": "Todos los derechos reservados.",
   "social": [
