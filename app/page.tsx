@@ -165,7 +165,7 @@ export default async function Home() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">{site.contact.email}</p>
+                      <a href={`mailto:${site.contact.email}`} className="text-muted-foreground hover:underline">{site.contact.email}</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
