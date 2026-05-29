@@ -42,7 +42,7 @@ export function ContactForm() {
       <div className="flex flex-col items-start gap-4 min-h-[300px] justify-center">
         <p className="text-2xl">✓</p>
         <h2 className="text-xl font-semibold">Mensaje enviado</h2>
-        <p className="text-muted-foreground">Gracias por contactarme. Respondré dentro de las 48 horas.</p>
+        <p className="text-muted-foreground">Gracias por contactarme. Responderé pronto.</p>
         <Button variant="outline" onClick={() => setStatus("idle")}>
           Enviar otro mensaje
         </Button>
