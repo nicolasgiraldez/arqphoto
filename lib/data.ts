@@ -20,6 +20,7 @@ export interface Project {
   services: string[]
   portrait?: boolean
   crop?: 'top' | 'center' | 'bottom'
+  hidden?: boolean
 }
 
 export interface SocialLink {

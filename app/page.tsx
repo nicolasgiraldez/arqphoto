@@ -18,7 +18,7 @@ export default async function Home() {
     readDestacados(),
     readSite(),
   ])
-  const destacados = allProjects.filter((p) => featuredIds.includes(p.id))
+  const destacados = allProjects.filter((p) => !p.hidden && featuredIds.includes(p.id))
   const instagramUrl = site.social.find((s) => s.label === 'Instagram')?.url ?? '#'
   return (
     <div className="flex min-h-screen flex-col">

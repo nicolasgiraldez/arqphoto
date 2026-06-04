@@ -195,6 +195,7 @@
       "Documentación de reforma residencial"
     ],
     "portrait": false,
+    "hidden": true,
     "id": "5"
   },
   {
@@ -222,6 +223,7 @@
       "Documentación de proyecto completo"
     ],
     "portrait": false,
+    "hidden": true,
     "carouselImage": "/images/hotel-san-telmo/hotel-san-telmo-terraza.png",
     "id": "6"
   },
@@ -249,6 +251,7 @@
       "Documentación para comunicación institucional"
     ],
     "portrait": false,
+    "hidden": true,
     "id": "7"
   },
   {
@@ -276,6 +279,7 @@
       "Narrativa visual arquitectónica"
     ],
     "portrait": false,
+    "hidden": true,
     "carouselImage": "/images/biblioteca-parque-patricios/biblioteca-parque-patricios-patio.png",
     "id": "8"
   },
@@ -304,6 +308,7 @@
       "Fotografía para real estate y marketing"
     ],
     "portrait": false,
+    "hidden": true,
     "carouselImage": "/images/viviendas-escobar/viviendas-escobar-aerea.png",
     "id": "9"
   }

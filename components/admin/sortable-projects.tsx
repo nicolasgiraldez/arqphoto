@@ -51,6 +51,9 @@ function SortableRow({ project }: { project: Project }) {
         </button>
         <div className="min-w-0">
           <span className="font-medium text-sm">{project.title}</span>
+          {project.hidden && (
+            <span className="ml-2 inline-flex items-center px-1.5 py-0.5 text-xs font-medium bg-muted text-muted-foreground rounded">Oculto</span>
+          )}
           <span className="text-muted-foreground text-xs ml-2">{project.location} · {project.year}</span>
           <span className="text-muted-foreground text-xs ml-2 uppercase tracking-wide">{project.category}</span>
         </div>

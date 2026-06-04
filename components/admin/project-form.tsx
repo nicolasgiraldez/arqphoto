@@ -266,6 +266,7 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
     services: initialData?.services ?? [] as string[],
     portrait: initialData?.portrait ?? false,
     crop: initialData?.crop ?? '' as string,
+    hidden: initialData?.hidden ?? false,
   })
 
   function set<K extends keyof typeof form>(key: K, value: typeof form[K]) {
@@ -307,6 +308,7 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
       related: form.related,
       services: form.services,
       portrait: form.portrait,
+      hidden: form.hidden,
     }
     if (form.architect) payload.architect = form.architect
     if (form.crop) payload.crop = form.crop as Project['crop']
@@ -463,6 +465,15 @@ export function ProjectForm({ initialData, allProjects, mode }: Props) {
             className="w-4 h-4 rounded border"
           />
           <span className="text-sm">Formato retrato (portrait)</span>
+        </label>
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={form.hidden}
+            onChange={e => set('hidden', e.target.checked)}
+            className="w-4 h-4 rounded border"
+          />
+          <span className="text-sm">Ocultar proyecto del sitio</span>
         </label>
         <div className="space-y-1.5">
           <Label>Recorte de imagen</Label>

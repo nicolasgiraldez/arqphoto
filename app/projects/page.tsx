@@ -10,7 +10,7 @@ import { readProjects } from "@/lib/data"
 export const dynamic = 'force-dynamic'
 
 export default async function ProjectsPage() {
-  const projects = await readProjects()
+  const projects = (await readProjects()).filter(p => !p.hidden)
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">

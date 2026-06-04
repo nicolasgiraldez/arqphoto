@@ -34,6 +34,7 @@ export async function POST(request: Request) {
   if (body.architect) newProject.architect = body.architect
   if (body.portrait !== undefined) newProject.portrait = body.portrait
   if (body.crop) newProject.crop = body.crop
+  if (body.hidden !== undefined) newProject.hidden = body.hidden
 
   await writeProjects([...projects, newProject])
   return NextResponse.json(newProject, { status: 201 })
